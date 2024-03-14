@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FinalClinicMS" Class="ClinicManagementDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-E4BUB0D\SQLEXPRESS;Initial Catalog=FinalClinicMS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="Clinic.Properties.Settings" SettingsPropertyName="FinalClinicMSConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Equip_Request_Detail" Member="Equip_Request_Details">
+    <Type Name="Equip_Request_Detail">
+      <Column Name="eRequest_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Equip_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Static_Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Returned" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Remove" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Time_of_Borrow" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Time_of_Returned" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Equipment_Equip_Request_Detail" Member="Equipment" ThisKey="Equip_ID" OtherKey="Equip_ID" Type="Equipment" IsForeignKey="true" />
+      <Association Name="Request_Equip_Request_Detail" Member="Request" ThisKey="Request_ID" OtherKey="Request_ID" Type="Request" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Equipment" Member="Equipments">
+    <Type Name="Equipment">
+      <Column Name="Equip_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EquipName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Available_Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Equipment_Equip_Request_Detail" Member="Equip_Request_Details" ThisKey="Equip_ID" OtherKey="Equip_ID" Type="Equip_Request_Detail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Medicine" Member="Medicines">
+    <Type Name="Medicine">
+      <Column Name="Medicine_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MedName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Available_Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Medicine_Medicine_Request_Detail" Member="Medicine_Request_Details" ThisKey="Medicine_ID" OtherKey="Medicine_ID" Type="Medicine_Request_Detail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Medicine_Request_Detail" Member="Medicine_Request_Details">
+    <Type Name="Medicine_Request_Detail">
+      <Column Name="mRequest_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Medicine_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Medicine_Medicine_Request_Detail" Member="Medicine" ThisKey="Medicine_ID" OtherKey="Medicine_ID" Type="Medicine" IsForeignKey="true" />
+      <Association Name="Request_Medicine_Request_Detail" Member="Request" ThisKey="Request_ID" OtherKey="Request_ID" Type="Request" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Request" Member="Requests">
+    <Type Name="Request">
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Student_Request_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Staff_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Time" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="Findings" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Request_Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Remove" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Request_Equip_Request_Detail" Member="Equip_Request_Details" ThisKey="Request_ID" OtherKey="Request_ID" Type="Equip_Request_Detail" />
+      <Association Name="Request_Medicine_Request_Detail" Member="Medicine_Request_Details" ThisKey="Request_ID" OtherKey="Request_ID" Type="Medicine_Request_Detail" />
+      <Association Name="Staff_Request" Member="Staff" ThisKey="Staff_ID" OtherKey="Staff_ID" Type="Staff" IsForeignKey="true" />
+      <Association Name="Student_Request" Member="Student" ThisKey="Student_Request_ID" OtherKey="Student_Request_ID" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="Staff_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="User_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Photo_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Staff_Request" Member="Requests" ThisKey="Staff_ID" OtherKey="Staff_ID" Type="Request" />
+      <Association Name="User_Staff" Member="User" ThisKey="User_ID" OtherKey="User_ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Student" Member="Students">
+    <Type Name="Student">
+      <Column Name="Student_Request_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Student_ID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Student_Request" Member="Requests" ThisKey="Student_Request_ID" OtherKey="Student_Request_ID" Type="Request" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="User_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Association Name="User_Staff" Member="Staffs" ThisKey="User_ID" OtherKey="User_ID" Type="Staff" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StaffWindow" Member="StaffWindows">
+    <Type Name="StaffWindow">
+      <Column Name="Staff_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="User_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vBorrowedEquipLog" Member="vBorrowedEquipLogs">
+    <Type Name="vBorrowedEquipLog">
+      <Column Name="eRequest_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Student_ID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Equip_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Findings" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Time_of_Borrow" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Time_of_Returned" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Static_Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EquipName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Returned" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Remove" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vEquipmentInventory" Member="vEquipmentInventories">
+    <Type Name="vEquipmentInventory">
+      <Column Name="Equip_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EquipName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Available_Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vPendingPatientList" Member="vPendingPatientLists">
+    <Type Name="vPendingPatientList">
+      <Column Name="eRequest_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Student_ID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Equip_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Findings" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Time_of_Borrow" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Time_of_Returned" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Static_Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EquipName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Returned" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Remove" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vRequestList" Member="vRequestLists">
+    <Type Name="vRequestList">
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Student_ID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Findings" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Time" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="Remove" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Request_Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vStaffInfo" Member="vStaffInfos">
+    <Type Name="vStaffInfo">
+      <Column Name="Staff_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="User_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Photo_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vStudentRequestMeds" Member="vStudentRequestMeds">
+    <Type Name="vStudentRequestMed">
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Student_ID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Findings" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MedName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vPending" Member="vPendings">
+    <Type Name="vPending">
+      <Column Name="Student_ID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Request_Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vHistoryLog" Member="vHistoryLogs">
+    <Type Name="vHistoryLog">
+      <Column Name="eRequest_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Student_ID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Equip_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Findings" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Time_of_Borrow" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Time_of_Returned" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Static_Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EquipName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Returned" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Remove" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.uspEquipments" Method="uspEquipments">
+    <ElementType Name="uspEquipmentsResult">
+      <Column Name="Equip_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EquipName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Available_Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.uspMedicineStock" Method="uspMedicineStock">
+    <Parameter Name="medName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="uspMedicineStockResult">
+      <Column Name="Medicine_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MedName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Available_Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W1_Login" Method="W1_Login">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(16)" />
+    <ElementType Name="W1_LoginResult">
+      <Column Name="User_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W1_StaffDetails" Method="W1_StaffDetails">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="W1_StaffDetailsResult">
+      <Column Name="Staff_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="User_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Photo_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W2_DefaultRequest" Method="W2_DefaultRequest">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W2_Equipments" Method="W2_Equipments">
+    <ElementType Name="W2_EquipmentsResult">
+      <Column Name="Equip_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EquipName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Available_Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W2_EquipmentStock" Method="W2_EquipmentStock">
+    <Parameter Name="equipName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="W2_EquipmentStockResult">
+      <Column Name="Equip_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EquipName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Available_Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W2_PatientInfo" Method="W2_PatientInfo">
+    <Parameter Name="Student_ID" Parameter="student_ID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Course" Parameter="course" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Course_Level" Parameter="course_Level" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W2_RequestDetails" Method="W2_RequestDetails">
+    <Parameter Name="Equip_ID" Parameter="equip_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Static_Quantity" Parameter="static_Quantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Quantity" Parameter="quantity" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W2_RequestFindings" Method="W2_RequestFindings">
+    <Parameter Name="findings" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W4_checkExistingItem" Method="W4_checkExistingItem">
+    <Parameter Name="eRequestID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="equipName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="W4_checkExistingItemResult">
+      <Column Name="[rowCount]" Member="rowCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W4_EquipmentReUpdate" Method="W4_EquipmentReUpdate">
+    <Parameter Name="requestID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="equipName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="quantity" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W4_EquipmentStock" Method="W4_EquipmentStock">
+    <Parameter Name="EquipName" Parameter="equipName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="W4_EquipmentStockResult">
+      <Column Name="Equip_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EquipName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Available_Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W4_EquipReturned" Method="W4_EquipReturned">
+    <Parameter Name="eRequest_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Equip_ID" Parameter="equip_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Returned" Parameter="returned" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W4_GetStaffID" Method="W4_GetStaffID">
+    <Parameter Name="userName" Type="System.Int32" DbType="Int" />
+    <ElementType Name="W4_GetStaffIDResult">
+      <Column Name="Staff_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W4_GetStudentRequestEquips" Method="W4_GetStudentRequestEquips">
+    <Parameter Name="requestID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="W4_GetStudentRequestEquipsResult">
+      <Column Name="eRequest_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Student_ID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Equip_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Findings" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Time_of_Borrow" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Time_of_Returned" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Static_Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EquipName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Returned" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Remove" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W4_InsertRequestMeds" Method="W4_InsertRequestMeds">
+    <Parameter Name="requestID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="medName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="medQty" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W4_InsertUpdateEquips" Method="W4_InsertUpdateEquips">
+    <Parameter Name="requestID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="equipName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="quantity" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W4_MedicineStock" Method="W4_MedicineStock">
+    <Parameter Name="medName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="W4_MedicineStockResult">
+      <Column Name="Available_Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W4_Medicines" Method="W4_Medicines">
+    <ElementType Name="W4_MedicinesResult">
+      <Column Name="Medicine_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MedName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Available_Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W4_PatientInfoUpdate" Method="W4_PatientInfoUpdate">
+    <Parameter Name="requestID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="studentID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Course" Parameter="course" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Course_Level" Parameter="course_Level" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W4_Remove" Method="W4_Remove">
+    <Parameter Name="Request_ID" Parameter="request_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W4_RequestList" Method="W4_RequestList">
+    <ElementType Name="W4_RequestListResult">
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Student_ID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Findings" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W4_RequestUpdate" Method="W4_RequestUpdate">
+    <Parameter Name="Request_ID" Parameter="request_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="userID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Findings" Parameter="findings" Type="System.String" DbType="NVarChar(1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W4_UpdateEquipQty" Method="W4_UpdateEquipQty">
+    <Parameter Name="RequestID" Parameter="requestID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EquipName" Parameter="equipName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="quantity" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W5_GetMedicineIDs" Method="W5_GetMedicineIDs">
+    <Parameter Name="MedName" Parameter="medName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="W5_GetMedicineIDsResult">
+      <Column Name="Medicine_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MedName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Available_Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image_Loc" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W5_GetMedicineNames" Method="W5_GetMedicineNames">
+    <ElementType Name="W5_GetMedicineNamesResult">
+      <Column Name="MedName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W5_UpdateMedicineList" Method="W5_UpdateMedicineList">
+    <Parameter Name="newMed_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="OldMedName" Parameter="oldMedName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="newDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="newAvailable_Qty" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W7_GetAllRecords" Method="W7_GetAllRecords">
+    <Parameter Name="firstMonth" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="endMonth" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="W7_GetAllRecordsResult">
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Student_ID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Findings" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Time" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="Remove" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Request_Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W7_GetStudentMedsReqs" Method="W7_GetStudentMedsReqs">
+    <Parameter Name="requestID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="W7_GetStudentMedsReqsResult">
+      <Column Name="MedName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W8_StaffInformation" Method="W8_StaffInformation">
+    <Parameter Name="User_ID" Parameter="user_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(16)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W7_ReturnedQty" Method="W7_ReturnedQty">
+    <Parameter Name="requestID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="equipName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="W7_ReturnedQtyResult">
+      <Column Name="Return_Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W4_EquipReturnedNormal" Method="W4_EquipReturnedNormal">
+    <Parameter Name="eRequest_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Equip_ID" Parameter="equip_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Returned" Parameter="returned" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W7_GetStudentEquipReqs" Method="W7_GetStudentEquipReqs">
+    <Parameter Name="requestID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="W7_GetStudentEquipReqsResult">
+      <Column Name="EquipName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Static_Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.W5_EquipmentStock" Method="W5_EquipmentStock">
+    <Parameter Name="Equip_Name" Parameter="equip_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Available_Qty" Parameter="available_Qty" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Equip_Img" Parameter="equip_Img" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W5_MedicineStock" Method="W5_MedicineStock">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Quantity" Parameter="quantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="image" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W6_UpdateMedicine" Method="W6_UpdateMedicine">
+    <Parameter Name="Med_ID" Parameter="med_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Available_Qty" Parameter="available_Qty" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.W6_UpdateEquipment" Method="W6_UpdateEquipment">
+    <Parameter Name="Equip_ID" Parameter="equip_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Available_Qty" Parameter="available_Qty" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

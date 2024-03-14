@@ -1,0 +1,35 @@
+﻿<Window x:Class="Clinic.AddNewStaff"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clinic"
+        mc:Ignorable="d"
+        Title="AddNewStaff" Height="716.373" Width="480" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFB6D2D3">
+        <Label Content="NEW STAFF" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top" Width="111" FontSize="15" FontWeight="Bold"/>
+        <Label Content="Staff ID" HorizontalAlignment="Left" Margin="50,89,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="tb_staffid" HorizontalAlignment="Left" Height="23" Margin="150,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246" Background="#FFC2C9CE" FontSize="16" ToolTip="ID given to the staff"/>
+        <Label Content="Personal Information" HorizontalAlignment="Left" Margin="24,54,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="50,129,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="tb_FN" HorizontalAlignment="Left" Height="23" Margin="150,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246" Background="#FFC2C9CE" FontSize="16" ToolTip="First name of the staff"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="50,172,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="tb_LN" HorizontalAlignment="Left" Height="23" Margin="150,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246" Background="#FFC2C9CE" FontSize="16" ToolTip="Last name of the staff"/>
+        <Label Content="Age" HorizontalAlignment="Left" Margin="50,220,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="tb_age" HorizontalAlignment="Left" Height="23" Margin="150,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246" Background="#FFC2C9CE" FontSize="16" ToolTip="Age of the staff"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="50,271,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="tb_email" HorizontalAlignment="Left" Height="23" Margin="150,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246" Background="#FFC2C9CE" FontSize="16" ToolTip="email of the staff"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="50,357,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="tb_username" HorizontalAlignment="Left" Height="23" Margin="150,364,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246" Background="#FFC2C9CE" FontSize="16" ToolTip="Enter username"/>
+        <Label Content="Account Information" HorizontalAlignment="Left" Margin="24,322,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="50,397,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="tb_password" HorizontalAlignment="Left" Height="23" Margin="150,404,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246" Background="#FFC2C9CE" FontSize="16" ToolTip="Enter password"/>
+        <Label Content="Confirm Pass" HorizontalAlignment="Left" Margin="41,440,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="tb_confirm" HorizontalAlignment="Left" Height="23" Margin="150,447,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246" Background="#FFC2C9CE" FontSize="16" ToolTip="Confirm password"/>
+        <Label Content="Image" HorizontalAlignment="Left" Margin="50,488,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="tb_imgfilepath" HorizontalAlignment="Left" Height="23" Margin="150,496,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246" Background="#FFC2C9CE" FontSize="16" ToolTip="image file path "/>
+        <Button x:Name="btn_browse" Content="Browse" HorizontalAlignment="Left" Margin="150,524,0,0" VerticalAlignment="Top" Height="26" Width="103" FontFamily="Gadugi" Background="#FF484B4E" Foreground="#FFB7D6D7" FontSize="15" ToolTip="Browse file path"/>
+        <Button x:Name="btn_add" Content="ADD" HorizontalAlignment="Left" Margin="50,576,0,0" VerticalAlignment="Top" Height="42" Width="346" FontFamily="Gadugi" FontWeight="Bold" Background="#FF484B4E" Foreground="#FFB7D6D7" FontSize="15" ToolTip="Add staff"/>
+
+    </Grid>
+</Window>
