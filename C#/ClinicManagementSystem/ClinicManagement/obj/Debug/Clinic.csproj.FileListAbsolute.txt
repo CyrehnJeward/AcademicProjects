@@ -1,0 +1,376 @@
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\Clinic.csproj.AssemblyReference.cache
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\Login.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\MainWindow.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\RequestDetails.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\App.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.cache
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.lref
+C:\Users\SISC\source\repos\Clinic\Clinic\bin\Debug\Clinic.exe.config
+C:\Users\SISC\source\repos\Clinic\Clinic\bin\Debug\Clinic.exe
+C:\Users\SISC\source\repos\Clinic\Clinic\bin\Debug\Clinic.pdb
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\Login.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\MainWindow.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\RequestDetails.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\Clinic.g.resources
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\Clinic.Properties.Resources.resources
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\Clinic.csproj.GenerateResource.cache
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\Clinic.csproj.CoreCompileInputs.cache
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\Clinic.exe
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\Clinic.pdb
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\RequestList.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\RequestList.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\PatientInfo.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\PatientInfo.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\BorrowedItemLog.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\EditRequestList.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\ListOfStaff.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\RequestHistory.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\AddNewStaff.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\MainWindow1.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\UpdateStaff.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\BorrowedItemLog.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\EditRequestList.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\ListOfStaff.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\RequestHistory.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\AddNewStaff.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\MainWindow1.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\UpdateStaff.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\EquipmentInventory.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\MedicineInventory.g.cs
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\EquipmentInventory.baml
+C:\Users\SISC\source\repos\Clinic\Clinic\obj\Debug\MedicineInventory.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\bin\Debug\Clinic.exe.config
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\bin\Debug\Clinic.exe
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\bin\Debug\Clinic.pdb
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Clinic.csproj.AssemblyReference.cache
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\AddNewStaff.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\BorrowedItemLog.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\EditRequestList.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\EquipmentInventory.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\ListOfStaff.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Login.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\MainWindow.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\MainWindow1.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\MedicineInventory.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\PatientInfo.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\RequestDetails.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\RequestHistory.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\RequestList.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\UpdateStaff.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\App.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.cache
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.lref
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\AddNewStaff.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\BorrowedItemLog.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\EditRequestList.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\EquipmentInventory.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\ListOfStaff.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Login.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\MainWindow.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\MainWindow1.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\MedicineInventory.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\PatientInfo.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\RequestDetails.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\RequestHistory.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\RequestList.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\UpdateStaff.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Themes\Generic.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Themes\XButton.baml
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Clinic.g.resources
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Clinic.Properties.Resources.resources
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Clinic.csproj.GenerateResource.cache
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Clinic.csproj.CoreCompileInputs.cache
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Clinic.exe
+C:\Users\charl\Downloads\Compressed\Clinic\Clinic\obj\Debug\Clinic.pdb
+C:\Users\SISC\Documents\System\Clinic\Clinic\bin\Debug\Clinic.exe.config
+C:\Users\SISC\Documents\System\Clinic\Clinic\bin\Debug\Clinic.exe
+C:\Users\SISC\Documents\System\Clinic\Clinic\bin\Debug\Clinic.pdb
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Clinic.csproj.AssemblyReference.cache
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\AddNewStaff.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\BorrowedItemLog.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\EditRequestList.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\EquipmentInventory.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\ListOfStaff.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Login.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\MainWindow.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\MainWindow1.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\MedicineInventory.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\PatientInfo.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\RequestDetails.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\RequestHistory.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\RequestList.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\UpdateStaff.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\App.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.cache
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.lref
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\AddNewStaff.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\BorrowedItemLog.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\EditRequestList.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\EquipmentInventory.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\ListOfStaff.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Login.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\MainWindow.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\MainWindow1.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\MedicineInventory.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\PatientInfo.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\RequestDetails.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\RequestHistory.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\RequestList.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Themes\Generic.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Themes\XButton.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\UpdateStaff.baml
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Clinic.g.resources
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Clinic.Properties.Resources.resources
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Clinic.csproj.GenerateResource.cache
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Clinic.csproj.CoreCompileInputs.cache
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Clinic.exe
+C:\Users\SISC\Documents\System\Clinic\Clinic\obj\Debug\Clinic.pdb
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\bin\Debug\Clinic.exe.config
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\bin\Debug\Clinic.exe
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\bin\Debug\Clinic.pdb
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Clinic.csprojAssemblyReference.cache
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\AddNewStaff.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\BorrowedItemLog.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\EditRequestList.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\EquipmentInventory.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\ListOfStaff.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Login.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\MainWindow.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\MainWindow1.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\MedicineInventory.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\PatientInfo.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\RequestDetails.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\RequestHistory.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\UpdateStaff.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\App.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.cache
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.lref
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\AddNewStaff.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\BorrowedItemLog.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\EditRequestList.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\EquipmentInventory.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\ListOfStaff.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Login.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\MainWindow.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\MainWindow1.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\MedicineInventory.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\PatientInfo.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\RequestDetails.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\RequestHistory.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Themes\Generic.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Themes\XButton.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\UpdateStaff.baml
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Clinic.g.resources
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Clinic.Properties.Resources.resources
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Clinic.csproj.GenerateResource.cache
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Clinic.csproj.CoreCompileInputs.cache
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Clinic.exe
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\Clinic.pdb
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\RequestLists.g.cs
+C:\Users\HEWLETT-PACKARD\source\repos\Clinic\Clinic\obj\Debug\RequestLists.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Clinic.csproj.AssemblyReference.cache
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Clinic.csproj.SuggestedBindingRedirects.cache
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\AddNewStaff.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\BorrowedItemLog.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\EquipmentInventory.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\ListOfStaff.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Login.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\MainWindow.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\MedicineInventory.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\PatientInfo.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\RequestDetails.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\RequestHistory.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\RequestLists.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\UpdateStaff.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\App.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.cache
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.lref
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Clinic.exe
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Clinic.pdb
+D:\File Manager\Setup\CMS\Clinic\Clinic\bin\Debug\Clinic.exe.config
+D:\File Manager\Setup\CMS\Clinic\Clinic\bin\Debug\Clinic.exe
+D:\File Manager\Setup\CMS\Clinic\Clinic\bin\Debug\Clinic.pdb
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\AddNewStaff.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\BorrowedItemLog.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\EquipmentInventory.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\ListOfStaff.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Login.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\MainWindow.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\MedicineInventory.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\PatientInfo.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\RequestDetails.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\RequestHistory.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\RequestLists.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Themes\Generic.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Themes\XButton.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\UpdateStaff.baml
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Clinic.g.resources
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Clinic.Properties.Resources.resources
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Clinic.csproj.GenerateResource.cache
+D:\File Manager\Setup\CMS\Clinic\Clinic\obj\Debug\Clinic.csproj.CoreCompileInputs.cache
+D:\File Manager\Setup\NEW\Clinic\Clinic\bin\Debug\Clinic.exe.config
+D:\File Manager\Setup\NEW\Clinic\Clinic\bin\Debug\Clinic.exe
+D:\File Manager\Setup\NEW\Clinic\Clinic\bin\Debug\Clinic.pdb
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Clinic.csproj.AssemblyReference.cache
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Clinic.csproj.SuggestedBindingRedirects.cache
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\AddNewStaff.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\BorrowedItemLog.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\EquipmentInventory.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\ListOfStaff.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Login.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\MainWindow.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\MedicineInventory.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\PatientInfo.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\RequestDetails.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\RequestHistory.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\RequestLists.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\UpdateStaff.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\App.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.cache
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.lref
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\AddNewStaff.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\BorrowedItemLog.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\EquipmentInventory.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\ListOfStaff.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Login.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\MainWindow.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\MedicineInventory.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\PatientInfo.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\RequestDetails.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\RequestHistory.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\RequestLists.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Themes\Generic.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Themes\XButton.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\UpdateStaff.baml
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Clinic.g.resources
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Clinic.Properties.Resources.resources
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Clinic.csproj.GenerateResource.cache
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Clinic.csproj.CoreCompileInputs.cache
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Clinic.exe
+D:\File Manager\Setup\NEW\Clinic\Clinic\obj\Debug\Clinic.pdb
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\bin\Debug\Clinic.exe.config
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\bin\Debug\Clinic.exe
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\bin\Debug\Clinic.pdb
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Clinic.csproj.AssemblyReference.cache
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\AddNewStaff.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\BorrowedItemLog.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\EquipmentInventory.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\ListOfStaff.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Login.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\MainWindow.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\MedicineInventory.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\PatientInfo.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\RequestDetails.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\RequestHistory.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\RequestLists.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\UpdateStaff.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\App.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.cache
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.lref
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\AddNewStaff.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\BorrowedItemLog.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\EquipmentInventory.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\ListOfStaff.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Login.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\MainWindow.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\MedicineInventory.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\PatientInfo.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\RequestDetails.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\RequestHistory.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\RequestLists.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Themes\Generic.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Themes\XButton.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\UpdateStaff.baml
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Clinic.g.resources
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Clinic.Properties.Resources.resources
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Clinic.csproj.GenerateResource.cache
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Clinic.csproj.CoreCompileInputs.cache
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Clinic.exe
+C:\Users\SISC\Documents\System2\NEW\Clinic\Clinic\obj\Debug\Clinic.pdb
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\bin\Debug\Clinic.exe.config
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\bin\Debug\Clinic.exe
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\bin\Debug\Clinic.pdb
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Clinic.csprojAssemblyReference.cache
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\AddNewStaff.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\BorrowedItemLog.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\EquipmentInventory.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\ListOfStaff.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Login.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\MainWindow.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\MedicineInventory.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\PatientInfo.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\RequestDetails.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\RequestHistory.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\RequestLists.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\UpdateStaff.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\App.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.cache
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.lref
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\AddNewStaff.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\BorrowedItemLog.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\EquipmentInventory.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\ListOfStaff.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Login.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\MainWindow.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\MedicineInventory.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\PatientInfo.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\RequestDetails.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\RequestHistory.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\RequestLists.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Themes\Generic.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Themes\XButton.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\UpdateStaff.baml
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Clinic.g.resources
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Clinic.Properties.Resources.resources
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Clinic.csproj.GenerateResource.cache
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Clinic.csproj.CoreCompileInputs.cache
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Clinic.exe
+C:\Users\HEWLETT-PACKARD\Downloads\Palamara Update\NEW\Clinic\Clinic\obj\Debug\Clinic.pdb
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Clinic.csproj.AssemblyReference.cache
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Clinic.csproj.SuggestedBindingRedirects.cache
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\AddNewStaff.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\BorrowedItemLog.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\EquipmentInventory.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\ListOfStaff.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Login.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\MainWindow.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\MedicineInventory.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\PatientInfo.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\RequestDetails.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\RequestHistory.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\RequestLists.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\UpdateStaff.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\App.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.cache
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.lref
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Clinic.exe
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Clinic.pdb
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\bin\Debug\Clinic.exe.config
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\bin\Debug\Clinic.exe
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\bin\Debug\Clinic.pdb
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\AddNewStaff.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\BorrowedItemLog.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\EquipmentInventory.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\ListOfStaff.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Login.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\MainWindow.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\MedicineInventory.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\PatientInfo.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\RequestDetails.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\RequestHistory.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\RequestLists.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Themes\Generic.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Themes\XButton.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\UpdateStaff.baml
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Clinic.g.resources
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Clinic.Properties.Resources.resources
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Clinic.csproj.GenerateResource.cache
+D:\File Manager\Setup\FINALSCMS\FinalCMS\Clinic\Clinic\obj\Debug\Clinic.csproj.CoreCompileInputs.cache
