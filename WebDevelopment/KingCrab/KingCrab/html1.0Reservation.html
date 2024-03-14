@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <script src="inputFieldFunctions.js"></script>
+    <link rel="stylesheet" href="stylesheet2.css" />
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+   
+  </head>
+  <body>
+    <div class="header">
+      <h1>Front Desk</h1>
+    </div>
+
+    <div class="navbar">
+      <a href="#" class="active">Home</a>
+      
+      <a href="htmlLogin.html" class="right">Logout</a>
+
+
+    </div>
+
+    <div class="row">
+      
+      <div class="main">
+        <h2>Reservation</h2>
+        <button type="button" class="centerflex" onclick="createAppointment()" id="createAppointment">Create new appointment</button>
+        <table class="centerflex" id="table"></table>
+        <input type="hidden" id="WaiterID" name="UserID">
+      </div>
+    </div>
+
+    <div class="footer">
+      <h2>King Crab Restaurant</h2>
+    </div>
+  </body>
+</html>
+<script>
+  // window.onload = function () {
+    
+  //   // const queryString = window.location.search;
+  //   // const urlParams = new URLSearchParams(queryString);
+  //   // var userID =  urlParams.get("ID");
+  //   // sessionStorage.setItem("ID",userID);
+  //   setIDtoSessionStorage();
+  //   sessionStorageCheckID();
+
+  // };
+  // setIDtoSessionStorage();
+
+  
+  
+  window.onload = function () {
+    
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    var UserID =  urlParams.get("ID");
+    sessionStorage.setItem("ID",UserID);
+  };
+
+
+  
+  var table = document.getElementById("table");
+  var thead, tr, td;
+  table.appendChild((thead = document.createElement("thead")));
+  thead.appendChild((tr = document.createElement("tr")));
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "<center><b>Reservation#</center>";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "<center><b>Customer Information</center>";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "<center><b>Customer Quantity</center>";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "<center><b>Date</center>";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "<center><b>Time</center>";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "<center><b>Table Number</center>";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "<center><b>Reservation Status</center>";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "<center><b>Cancellation Status</center>";
+  
+  var httpRequest;
+  var start = 0;
+  //   document.getElementById("request").addEventListener("click", makeRequest);
+  var httpRequest = new XMLHttpRequest();
+  httpRequest.onreadystatechange = function () {
+    if (httpRequest.readyState === httpRequest.DONE) {
+      if (httpRequest.status === 200) {
+        //alert(httpRequest.responseText);
+        var rows = document.getElementById("table").rows.length;
+        var rows = document.getElementById("table").rows.length;
+        
+        if(rows > 1 ){
+            for (let i = rows; i > 1; i--){
+                document.getElementById("table").deleteRow(i-1);
+            }
+        }
+        
+        myObj = JSON.parse(httpRequest.responseText);
+        for (var key of Object.keys(myObj)) {
+          tr = document.createElement("tr");
+          tr.setAttribute("id", "row" + key);
+          // if (key % 2 == 0) {
+          //   tr.setAttribute("style", "background:white");
+          // }
+          var n = myObj[key].TB_Availability;
+
+            
+          if(myObj[key].Status != '0'){
+          //#region Edit this form database
+          table.appendChild(tr);
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = key;
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = myObj[key].CustomerName;
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = myObj[key].RD_CustomerQuantity;
+          tr.appendChild((td = document.createElement("td")));
+          var temp = myObj[key].RD_Date.date;
+          const splitDate= temp.split(" ");
+          td.innerHTML = splitDate[0];
+
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = splitDate[1];
+
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = myObj[key].TB_ID;
+         
+         //-------------------------------------------------//
+          tr.appendChild((td = document.createElement("td")));
+          var btn = document.createElement("input");
+          btn.type = "button";
+          btn.className = "btn";
+          btn.value = myObj[key].Status;
+          var statuses = btn.value;
+          // if(btn.value != 0){
+          //   // btn.setAttribute('disabled', '');
+          //   btn.disabled = true;
+          // }
+          
+          if(myObj[key].Status == '1'){
+            // btn.setAttribute('disabled', '');
+            btn.value = "Confirm";
+          }
+
+          if(myObj[key].Status == '2'){
+            // btn.setAttribute('disabled', '');
+            btn.disabled = true;
+            btn.value = "Waiter: " + myObj[key].ED_ID;
+          }
+          
+          initial();
+          btn.onclick = (function (key, value) {
+            return function () {
+              
+              updateStatus(key, value);
+              document.location.reload();
+            };
+          
+          })(key);
+
+         
+          td.appendChild(btn);
+        
+          //-------------------------------------------------//
+
+          tr.appendChild((td = document.createElement("td")));
+          var btn1 = document.createElement("input");
+
+          btn1.type = "button";
+          btn1.className = "btn";
+          btn1.value = "Cancel";
+
+          if(statuses != '1'){
+            // btn.setAttribute('disabled', '');
+            btn1.disabled = true;
+            btn1.value = "CHECK-IN";
+          }
+          btn1.onclick = (function (key) {
+            return function () {
+              removeStatus(key);
+            };
+          })(key);
+          
+        
+          td.appendChild(btn1);
+          
+          //-------------------------------------------------//
+         
+         //#endregion Edit this form database
+          }
+          
+          
+         
+        }
+      } 
+
+
+      else {
+        alert("Something's wrong here!");
+      }
+    }
+  }
+  function updateStatus(key, value) {
+    httpRequest.open("get","GetTableData.php?Table=viewReservationDetail&updateID="+key);
+    httpRequest.send();
+    randomWaiter(key, value);
+  }
+
+  function removeStatus(key) {
+    //alert(key);
+    httpRequest.open("get", "PHP1.0RemoveRDStatus.php?Table=viewReservationDetail&updateID="+key);
+    httpRequest.send();
+    document.location.reload()
+  }
+
+  function createAppointment(){
+    window.location.href = "html1.1Reservation.html";
+  }
+
+
+  // ------WELP
+
+  function randomWaiter(key, value){
+    var sample = "";
+    var IDssss="";
+    var WD = "";
+    httpRequest.onreadystatechange = function () {
+    var sample = "";
+    if (httpRequest.readyState === httpRequest.DONE) {
+      if (httpRequest.status === 200) {
+        //alert(httpRequest.responseText);
+        myObj = JSON.parse(httpRequest.responseText);
+        var keys = "";
+        for (var key of Object.keys(myObj)) {
+            if(myObj[key].UT_ID == 2){
+              keys += key + "\t";  
+            }
+          }
+            var result = keys.replace(/^\s+|\s+$/gm,'');
+            const myArray = result.split("\t");  
+            var randomIndex = Math.floor(Math.random() * myArray.length); 
+            var randomElement = parseInt(myArray[randomIndex]); 
+            sample = randomElement.toString();
+            
+        }
+        document.getElementById("WaiterID").value = sample;
+        IDssss = document.getElementById("WaiterID").value;
+        sessionStorage.setItem("IDsss",IDssss);
+      }
+    }
+
+    WD = sessionStorage.getItem("IDsss");
+    // IDssss = document.getElementById("WaiterID").value;
+    // sessionStorage.setItem("ID",IDssss);
+    if(WD != null){
+      alert("submited");
+      httpRequest.open("get", "PHPUpdateWaiter.php?Table=tbEmployee&updateID="+key+"&waiterID="+WD);
+      httpRequest.send();
+      return value = WD;
+    }
+
+    
+  }
+
+  function initial(){
+    var sample = "";
+    var IDssss="";
+    var WD = "";
+    httpRequest.onreadystatechange = function () {
+    var sample = "";
+    if (httpRequest.readyState === httpRequest.DONE) {
+      if (httpRequest.status === 200) {
+        //alert(httpRequest.responseText);
+        myObj = JSON.parse(httpRequest.responseText);
+        var keys = "";
+        for (var key of Object.keys(myObj)) {
+            if(myObj[key].UT_ID == 2){
+              keys += key + "\t";  
+            }
+          }
+            var result = keys.replace(/^\s+|\s+$/gm,'');
+            const myArray = result.split("\t");  
+            var randomIndex = Math.floor(Math.random() * myArray.length); 
+            var randomElement = parseInt(myArray[randomIndex]); 
+            sample = randomElement.toString();
+            
+        }
+        document.getElementById("WaiterID").value = sample;
+        IDssss = document.getElementById("WaiterID").value;
+        sessionStorage.setItem("IDsss",IDssss);
+      }
+    }
+
+    WD = sessionStorage.getItem("IDsss");
+    // IDssss = document.getElementById("WaiterID").value;
+    // sessionStorage.setItem("ID",IDssss);
+    httpRequest.open("get", "PHPUpdateWaiter.php?Table=tbEmployee&updateID=0&waiterID=0");
+    httpRequest.send();
+  }
+
+
+
+
+
+
+
+
+
+
+
+  httpRequest.open("get", "GetTableData.php?Table=viewReservationDetail&TableID=0&updateID=0");
+  httpRequest.send();
+  
+</script>

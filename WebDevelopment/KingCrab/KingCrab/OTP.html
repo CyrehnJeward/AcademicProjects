@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OTP</title>
+	<link rel="stylesheet" href="OTP.css">
+</head>
+<body>
+	<div class="container">
+		<h1>ENTER OTP</h1>
+		<div class="userInput">
+            <form action="TransferFunds.php"  id ="myForm" method="get">
+			<input type="text" id='ist' name="ist" maxlength="1" onkeyup="clickEvent(this,'sec')" onchange="check_OTP()">
+			<input type="text" id="sec" name="sec" maxlength="1" onkeyup="clickEvent(this,'third')" onchange="check_OTP()">
+			<input type="text" id="third" name="third" maxlength="1" onkeyup="clickEvent(this,'fourth')" onchange="check_OTP()">
+			<input type="text" id="fourth" name="fourth" maxlength="1" onkeyup="clickEvent(this,'fifth')" onchange="check_OTP()">
+			<input type="text" id="fifth"  name="fifth" maxlength="1" onchange="check_OTP()">
+            <div style="visibility:hidden">
+                
+                <input type="text"  name="accountID" id = "accountID" required>
+                <input type="text"  name="recepient" id = "recepient" required>
+                <input type="text"  name="amount" id = "amount" required>
+                <input type="text"  name="remark" id = "remark" required>
+            </div>
+
+           
+		</div>
+		<button type="submit" class="button" name="submit" id="submit"> CONFIRM
+        </button>
+        </form>
+	</div>
+</body>
+</html>
+<script>
+    // window.onload = function() {
+    //     var accountID = stuffGetter("accountID");
+    //     var recepient = stuffGetter("recepient");
+    //     var amount = stuffGetter("amount");
+    //     var remark = stuffGetter("remark");
+
+    //     document.getElementById("accountID").value = accountID;
+    //     document.getElementById("recepient").value = recepient;
+    //     document.getElementById("amount").value = amount;
+    //     document.getElementById("remark").value = remark;
+    
+    // };
+    var accountID = stuffGetter("accountID");
+     var recepient = stuffGetter("recepient");
+        var amount = stuffGetter("amount");
+        var remark = stuffGetter("remark");
+
+        document.getElementById("accountID").value = accountID;
+        document.getElementById("recepient").value = recepient;
+        document.getElementById("amount").value = amount;
+        document.getElementById("remark").value = remark;
+
+    var httpRequest;
+    var userID = document.getElementById("accountID").value;
+ 
+    //   document.getElementById("request").addEventListener("click", makeRequest);
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === httpRequest.DONE) {
+            if (httpRequest.status === 200) {
+                myObj = JSON.parse(httpRequest.responseText);
+                for (var key of Object.keys(myObj)) {
+                    
+                    
+                    oTPcode = myObj[key].oTPcode;
+                    
+
+                }
+            
+            } else {
+                alert("Something's wrong here!");
+            }
+        }
+        // table.setAttribute("class", "myId");
+    };
+
+    httpRequest.open(
+        "get",
+        "SetOTP.php?Table=ViewUserAccountBalance&userID=" + userID
+    );
+    httpRequest.send();
+
+   
+
+    // var header = document.getElementById("header");
+    // header.textContent = accountID+" "+recepient+" "+amount+" "+remark;
+
+    function stuffGetter(param)
+    {
+        const paramString = window.location.search;
+
+        const urlParams = new URLSearchParams(paramString);
+
+        return urlParams.get(param);
+    }
+
+    function stuffWriter(eleID, param)
+    {
+        document.getElementById(eleID).innerHTML = stuffGetter(param);
+    }
+
+    function check_OTP(){
+
+        var accountID = document.getElementById("accountID").value;
+        var ist = document.getElementById("ist").value;
+        var sec = document.getElementById("sec").value;
+        var third = document.getElementById("third").value;
+        var fourth = document.getElementById("fourth").value;
+        var fifth = document.getElementById("fifth").value;
+        var userInput = parseInt(ist+sec+third+fourth+fifth);
+        
+        
+        if(oTPcode === userInput){
+         
+            document.getElementById('submit').textContent ="CONFIRM";
+            document.getElementById('submit').disabled = false;
+        }else{
+            document.getElementById("submit").textContent = "WRONG OTP";
+            document.getElementById('submit').disabled = true;
+           
+   
+
+        }
+
+    }
+
+
+
+    function clickEvent(first,last){
+			if(first.value.length){
+				document.getElementById(last).focus();
+			}
+	}
+</script>
