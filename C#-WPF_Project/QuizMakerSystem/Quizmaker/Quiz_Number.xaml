@@ -1,0 +1,17 @@
+﻿<Window x:Class="Finals_Machine_Problem.Quiz_Number"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Finals_Machine_Problem"
+        mc:Ignorable="d"
+        Title="Quiz_Number" Height="130" Width="304">
+    <Grid Background="#FF161513">
+
+        <Label Content="Quiz Number:" HorizontalAlignment="Left" Margin="18,23,0,0" VerticalAlignment="Top" Background="#FFDEAD9C" Foreground="#FF302F2D" FontFamily="Gadugi" FontWeight="Bold" Width="92"/>
+        <TextBox x:Name="txtQuizNumber" HorizontalAlignment="Left" Margin="115,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="26" Background="#FF353432" Foreground="#FFDEAD9C" FontFamily="Gadugi" FontWeight="Bold" TextChanged="txtQuizNumber_TextChanged"/>
+        <Button x:Name="btnEnter" Content="Enter" HorizontalAlignment="Left" Margin="115,54,0,0" VerticalAlignment="Top" Height="26" Width="68" Foreground="#FFDEAD9C" Background="#FF353432" FontFamily="Gadugi" FontWeight="Bold" Click="btnEnter_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="200,54,0,0" VerticalAlignment="Top" Height="26" Width="68" Background="#FF353432" FontFamily="Gadugi" FontWeight="Bold" Foreground="#FFDEAD9C" Click="btnCancel_Click"/>
+
+    </Grid>
+</Window>
