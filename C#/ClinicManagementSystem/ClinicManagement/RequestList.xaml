@@ -1,0 +1,65 @@
+﻿<Window x:Class="Clinic.RequestList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clinic"
+        mc:Ignorable="d"
+        Title="RequestList" Height="450" Width="1184" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid Background="#FFB6D2D3">
+        <ListBox x:Name="lb_requestlist" HorizontalAlignment="Left" Height="306" Margin="23,55,0,0" VerticalAlignment="Top" Width="324" Background="#FFC2C9CE" FontFamily="Gadugi" FontSize="15" SelectionChanged="lb_requestlist_SelectionChanged"/>
+        <Label Content="List of Request" HorizontalAlignment="Left" Margin="23,25,0,0" VerticalAlignment="Top" Width="150" FontSize="15" FontWeight="Bold"/>
+        <Label Content="REQUEST LIST" HorizontalAlignment="Left" Margin="485,10,0,0" VerticalAlignment="Top" Width="150" FontSize="15" FontWeight="Bold"/>
+        <Label Content="Student ID" HorizontalAlignment="Left" Margin="363,72,0,0" VerticalAlignment="Top" FontSize="15" FontWeight="Bold"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="363,106,0,0" VerticalAlignment="Top" FontSize="15" FontWeight="Bold"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="363,142,0,0" VerticalAlignment="Top" FontSize="15" FontWeight="Bold"/>
+        <Label Content="Course" HorizontalAlignment="Left" Margin="363,180,0,0" VerticalAlignment="Top" FontSize="15" FontWeight="Bold"/>
+        <Label Content="Level" HorizontalAlignment="Left" Margin="363,221,0,0" VerticalAlignment="Top" FontSize="15" FontWeight="Bold"/>
+        <Label Content="Ailment/s" HorizontalAlignment="Left" Margin="363,263,0,0" VerticalAlignment="Top" FontSize="15" FontWeight="Bold"/>
+        <TextBox x:Name="tb_studentid" HorizontalAlignment="Left" Height="23" Margin="470,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Background="#FFC2C9CE" FontSize="15"/>
+        <TextBox x:Name="tb_FN" HorizontalAlignment="Left" Height="23" Margin="470,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Background="#FFC2C9CE" FontSize="15"/>
+        <TextBox x:Name="tb_LN" HorizontalAlignment="Left" Height="23" Margin="470,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Background="#FFC2C9CE" FontSize="15"/>
+        <TextBox x:Name="tb_Course" HorizontalAlignment="Left" Height="23" Margin="470,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Background="#FFC2C9CE" FontSize="15"/>
+        <TextBox x:Name="tb_Level" HorizontalAlignment="Left" Height="23" Margin="470,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Background="#FFC2C9CE" FontSize="15"/>
+        <TextBox x:Name="tb_Ailment" HorizontalAlignment="Left" Height="73" Margin="470,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Background="#FFC2C9CE" FontSize="15"/>
+        <ListBox x:Name="lb_medicinelist" HorizontalAlignment="Left" Height="81" Margin="679,78,0,0" VerticalAlignment="Top" Width="191" Background="#FFC2C9CE" FontFamily="Gadugi" FontSize="15"/>
+        <ListBox x:Name="lb_materiallist" HorizontalAlignment="Left" Height="81" Margin="924,81,0,0" VerticalAlignment="Top" Width="191" Background="#FFC2C9CE" FontFamily="Gadugi" FontSize="15"/>
+        <Label Content="List of Medicine" HorizontalAlignment="Left" Margin="687,51,0,0" VerticalAlignment="Top" Width="150" FontSize="15" FontWeight="Bold"/>
+        <Label Content="List of Materials" HorizontalAlignment="Left" Margin="932,51,0,0" VerticalAlignment="Top" Width="150" FontSize="15" FontWeight="Bold"/>
+        <local:XButton x:Name="btn1_request" Content="Request Done" HorizontalAlignment="Left" Margin="920,380,0,0" VerticalAlignment="Top" Width="134" FontWeight="Bold" FontSize="20" FontFamily="Gadugi"/>
+        <local:XButton x:Name="btn1_edit" Content="Edit" HorizontalAlignment="Left" Margin="911,335,0,0" VerticalAlignment="Top" Width="112" FontWeight="Bold" FontSize="20" FontFamily="Gadugi"/>
+        <local:XButton x:Name="btn1_itemlog" Content="Borrowed Item Log" HorizontalAlignment="Left" Margin="87,371,0,0" VerticalAlignment="Top" Width="191" FontWeight="Bold" FontSize="20" FontFamily="Gadugi" Click="btn1_itemlog_Click"/>
+        <local:XButton x:Name="btn1_back" Content="Back" HorizontalAlignment="Left" Margin="1064,383,0,0" VerticalAlignment="Top" Width="88" Height="23" FontWeight="Bold" FontSize="20" FontFamily="Gadugi"/>
+        <local:XButton x:Name="btn1_remove" Content="Remove" HorizontalAlignment="Left" Margin="470,368,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold" FontSize="20" FontFamily="Gadugi"/>
+        <ComboBox x:Name="cmb_medlist" HorizontalAlignment="Left" Margin="679,180,0,0" VerticalAlignment="Top" Width="191" Height="36" FontSize="15" FontFamily="Gadugi" FontWeight="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Text="Select Equipment Here">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FFC2C9CE" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <ComboBox x:Name="cmb_equiplist" HorizontalAlignment="Left" Margin="924,180,0,0" VerticalAlignment="Top" Width="191" Height="36" FontSize="15" FontFamily="Gadugi" FontWeight="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Text="Select Equipment Here">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FFC2C9CE" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="Quantity" HorizontalAlignment="Left" Margin="680,216,0,0" VerticalAlignment="Top" Height="29" Width="62"/>
+        <TextBox x:Name="tb_medsquantity" HorizontalAlignment="Left" Margin="747,245,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="62" Height="36" Background="#FFC2C9CE" FontSize="15" IsReadOnly="True"/>
+        <local:XButton x:Name="btn1_increment" Content="+" HorizontalAlignment="Left" Margin="680,245,0,0" VerticalAlignment="Top" Width="62" Height="36" FontFamily="Gadugi" FontWeight="Bold" FontSize="20"/>
+        <local:XButton x:Name="btn1_decrement" Content="-" HorizontalAlignment="Left" Margin="814,245,0,0" VerticalAlignment="Top" Width="56" Height="36" FontFamily="Gadugi" FontWeight="Bold" FontSize="20"/>
+        <Label Content="Quantity" HorizontalAlignment="Left" Margin="925,216,0,0" VerticalAlignment="Top" Height="29" Width="62"/>
+        <TextBox x:Name="tb_equipquantity" HorizontalAlignment="Left" Margin="992,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="62" Height="36" Background="#FFC2C9CE" FontSize="15" IsReadOnly="True"/>
+        <local:XButton x:Name="btn2_increment" Content="+" HorizontalAlignment="Left" Margin="925,245,0,0" VerticalAlignment="Top" Width="62" Height="36" FontFamily="Gadugi" FontWeight="Bold" FontSize="20"/>
+        <local:XButton x:Name="btn2_decrement" Content="-" HorizontalAlignment="Left" Margin="1059,245,0,0" VerticalAlignment="Top" Width="56" Height="36" FontFamily="Gadugi" FontWeight="Bold" FontSize="20"/>
+        <local:XButton x:Name="btn1_update" Content="Update" HorizontalAlignment="Left" Margin="1028,335,0,0" VerticalAlignment="Top" Width="112" FontWeight="Bold" FontSize="20" FontFamily="Gadugi"/>
+        <local:XButton x:Name="btn1_removemedreq" Content="Remove" HorizontalAlignment="Left" Margin="679,289,0,0" VerticalAlignment="Top" Width="99" Height="36" FontFamily="Gadugi" FontWeight="Bold" FontSize="20"/>
+        <local:XButton x:Name="btn1_addreqmeds" Content="Add" HorizontalAlignment="Left" Margin="783,289,0,0" VerticalAlignment="Top" Width="87" Height="36" FontFamily="Gadugi" FontWeight="Bold" FontSize="20" Click="btn1_addreqmeds_Click"/>
+        <local:XButton x:Name="btn1_removeequipreq" Content="Remove" HorizontalAlignment="Left" Margin="924,288,0,0" VerticalAlignment="Top" Width="99" Height="36" FontFamily="Gadugi" FontWeight="Bold" FontSize="20"/>
+        <local:XButton x:Name="btn1_addreqequip" Content="Add" HorizontalAlignment="Left" Margin="1028,289,0,0" VerticalAlignment="Top" Width="87" Height="36" FontFamily="Gadugi" FontWeight="Bold" FontSize="20"/>
+
+    </Grid>
+</Window>
