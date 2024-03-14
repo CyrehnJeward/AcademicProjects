@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <script src="inputFieldFunctions.js"></script>
+    <link rel="stylesheet" href="stylesheet2.css" />
+    <meta charset="UTF-8" />
+    <title>Midterm Project</title>
+  </head>
+  <body>
+
+    <div class="header">
+      <h1>Administrator Page</h1>
+    </div>
+    
+    <div class="navbar">
+      <a href="CustomerLoginDashboard.html"class="active" >Home</a>
+      <a href="LoginForm.html" class="right">Logout</a>
+    </div>
+    
+    <div class="row">
+      
+      <div class="main">
+        <h2>ID VERIFICATION</h2>
+        <table class="centerflex" id="table"></table>
+        
+      </div>
+    </div>
+    
+    <div class="footer">
+      <h2>National Bank</h2>
+    </div>
+
+  </body>
+</html>
+<script>
+   window.onload = function () {
+    
+    // const queryString = window.location.search;
+    // const urlParams = new URLSearchParams(queryString);
+    // var userID =  urlParams.get("ID");
+    // sessionStorage.setItem("ID",userID);
+    setIDtoSessionStorage();
+    sessionStorageCheckID();
+  };
+  setIDtoSessionStorage();
+  
+  var table = document.getElementById("table");
+  var thead, tr, td;
+  table.appendChild((thead = document.createElement("thead")));
+  thead.appendChild((tr = document.createElement("tr")));
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "User ID";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "Email Address";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "Name";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "Gender";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "Government Issued-ID";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "Email Verified?";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "ID Verified";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "Verify ID";
+
+  var httpRequest;
+  var start = 0;
+//   document.getElementById("request").addEventListener("click", makeRequest);
+  var httpRequest = new XMLHttpRequest()
+  httpRequest.onreadystatechange = function(){
+  if (httpRequest.readyState === httpRequest.DONE) {
+      if (httpRequest.status === 200) {
+        //alert(httpRequest.responseText);
+        var rows = document.getElementById("table").rows.length;
+        
+        if(rows > 2 ){
+            for (let i = rows; i > 1; i--){
+                document.getElementById("table").deleteRow(i-1);
+         
+
+            }
+           
+
+        }
+        myObj = JSON.parse(httpRequest.responseText);
+        for (var key of Object.keys(myObj)) {
+          tr = document.createElement("tr");
+          tr.setAttribute("id", "row" + key);
+          // if (key % 2 == 0) {
+          //   tr.setAttribute("style", "background:white");
+          // }
+
+          table.appendChild(tr);
+
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = key;
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = myObj[key].emailAddress;
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = myObj[key].Name;
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = myObj[key].gender;
+
+          var ImageScript = '<img src="'+ myObj[key].picturePath +'" height = "100" width = "100" alt ="">';
+
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = ImageScript;
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = myObj[key].emailVerified;
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = myObj[key].IDVerified;
+          tr.appendChild((td = document.createElement("td")));
+
+          var btn = document.createElement("input");
+          btn.type = "button";
+          btn.className = "btn";
+          btn.value = key;
+          btn.onclick = (function (key) {
+            return function () {
+              chooseUser(key);
+            };
+          })(key);
+          td.appendChild(btn);
+        }
+      } else {
+        alert("Something's wrong here!");
+      }
+    }
+    // table.setAttribute("class", "myId");
+  }
+
+
+  function chooseUser(key) {
+    // alert(key);
+    // xmlhttp.open("GET", "UpdateVerification.php?UserTable="+key, true); // this is to set the command to run
+    // xmlhttp.send(); // this will trigger the event
+    
+    httpRequest.open(
+      "get",
+      "GetData.php?Table=ViewUserSecurityKeys&rStart="+0+"&userID="+key
+    );
+    httpRequest.send();
+    
+  }
+  httpRequest.open(
+      "get",
+      "GetData.php?Table=ViewUserSecurityKeys&userID="+0
+    );
+    // "GetData.php?Table=ViewUserSecurityKeys&rStart="+start+"&userID="+0
+    httpRequest.send();
+</script>
