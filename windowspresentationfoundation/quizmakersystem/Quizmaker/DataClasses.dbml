@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BT3MP1_Trial" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-E4BUB0D\SQLEXPRESS;Initial Catalog=BT3MP1_Trial;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="Finals_Machine_Problem.Properties.Settings" SettingsPropertyName="BT3MP1_TrialConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbOccupation" Member="tbOccupations">
+    <Type Name="tbOccupation">
+      <Column Name="UserTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tbOccupation_tbUser" Member="tbUsers" ThisKey="UserTypeID" OtherKey="UserTypeID" Type="tbUser" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbUsers" Member="tbUsers">
+    <Type Name="tbUser">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserFirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserLastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserPassword" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tbUser_tbStudentAttemp" Member="tbStudentAttemps" ThisKey="UserID" OtherKey="UserID" Type="tbStudentAttemp" />
+      <Association Name="tbOccupation_tbUser" Member="tbOccupation" ThisKey="UserTypeID" OtherKey="UserTypeID" Type="tbOccupation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbStudentAttemps" Member="tbStudentAttemps">
+    <Type Name="tbStudentAttemp">
+      <Column Name="StudentAttemptID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentAttempts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StudentScore" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuizID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbUser_tbStudentAttemp" Member="tbUser" ThisKey="UserID" OtherKey="UserID" Type="tbUser" IsForeignKey="true" />
+      <Association Name="tbQuiz_tbStudentAttemp" Member="tbQuiz" ThisKey="QuizID" OtherKey="QuizID" Type="tbQuiz" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbQuiz" Member="tbQuizs">
+    <Type Name="tbQuiz">
+      <Column Name="QuizID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuizDetails" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QuizStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tbQuiz_tbStudentAttemp" Member="tbStudentAttemps" ThisKey="QuizID" OtherKey="QuizID" Type="tbStudentAttemp" />
+      <Association Name="tbQuiz_tbQuestion" Member="tbQuestions" ThisKey="QuizID" OtherKey="QuizID" Type="tbQuestion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbQuestion" Member="tbQuestions">
+    <Type Name="tbQuestion">
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QQuestion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="QOne" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QTwo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QThree" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QFour" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QAnswer" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="QuizID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbQuiz_tbQuestion" Member="tbQuiz" ThisKey="QuizID" OtherKey="QuizID" Type="tbQuiz" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.viewAverageList" Member="viewAverageLists">
+    <Type Name="viewAverageList">
+      <Column Name="[User ID]" Member="User_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[First Name]" Member="First_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Last Name]" Member="Last_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Student Score]" Member="Student_Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Quiz ID]" Member="Quiz_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.viewActiveQuiz" Member="viewActiveQuizs">
+    <Type Name="viewActiveQuiz">
+      <Column Name="[Quiz ID]" Member="Quiz_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[User ID]" Member="User_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Student Attempt]" Member="Student_Attempt" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Student Score]" Member="Student_Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.viewSUMofScores" Member="viewSUMofScore1s">
+    <Type Name="viewSUMofScore1">
+      <Column Name="[Attempt ID]" Member="Attempt_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Quiz ID]" Member="Quiz_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[User ID]" Member="User_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[First Name]" Member="First_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Last Name]" Member="Last_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Student Attempt]" Member="Student_Attempt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Student Score]" Member="Student_Score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.viewQuizNum" Member="viewQuizNums">
+    <Type Name="viewQuizNum">
+      <Column Name="QuizID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuizDetails" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QuizStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.viewQuestionAnswer" Member="viewQuestionAnswers">
+    <Type Name="viewQuestionAnswer">
+      <Column Name="UserTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserFirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserLastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QuizID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QQuestion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="QOne" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QTwo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QThree" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QFour" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QAnswer" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.uspCreateQuestion" Method="uspCreateQuestion">
+    <Parameter Name="qquestion" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="qone" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="qtwo" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="qthree" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="qfour" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="qanswer" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="qimage" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="quiznum" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.uspCreateQuiz" Method="uspCreateQuiz">
+    <Parameter Name="quizdetails" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="quizstatus" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.uspCreateStudentAttempt" Method="uspCreateStudentAttempt">
+    <Parameter Name="studentattempts" Type="System.Int32" DbType="Int" />
+    <Parameter Name="studentscore" Type="System.Int32" DbType="Int" />
+    <Parameter Name="quiznum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="usernum" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.uspLoginQuiz" Method="uspLoginQuiz">
+    <Parameter Name="quiznum" Type="System.Int32" DbType="Int" />
+    <ElementType Name="uspLoginQuizResult">
+      <Column Name="QuizID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.uspLogin" Method="uspLogin">
+    <Parameter Name="userNum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="password" Type="System.String" DbType="VarChar(16)" />
+    <ElementType Name="uspLoginResult">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserFirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserLastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserPassword" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.uspLoginUser" Method="uspLoginUser">
+    <Parameter Name="userID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="password" Type="System.String" DbType="VarChar(16)" />
+    <ElementType Name="uspLoginUserResult">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserPassword" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

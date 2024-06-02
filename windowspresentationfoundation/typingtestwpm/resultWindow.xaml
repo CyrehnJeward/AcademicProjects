@@ -1,0 +1,23 @@
+﻿<Window x:Class="MidtermProject.resultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MidtermProject"
+        mc:Ignorable="d"
+        Title="resultWindow" Height="384" Width="627">
+    <Grid Background="#FF4C5461">
+        <Label Content="Wpm" HorizontalAlignment="Left" Margin="158,92,0,0" VerticalAlignment="Top" Foreground="#FFF7598C" Width="180" FontSize="20" FontFamily="Gadugi" FontWeight="Bold" Height="47"/>
+        <Label Content="Accuracy" HorizontalAlignment="Left" Margin="158,144,0,0" VerticalAlignment="Top" Foreground="#FFF7598C" FontFamily="Gadugi" FontSize="20" FontWeight="Bold" Width="180" Height="47"/>
+        <Label Content="Characters&#xD;&#xA;" HorizontalAlignment="Left" Margin="158,196,0,0" VerticalAlignment="Top" Foreground="#FFF7598C" FontFamily="Gadugi" FontWeight="Bold" FontSize="20" Height="47"/>
+        <Button x:Name="btnClose" Content="❌" HorizontalAlignment="Left" Margin="176,272,0,0" VerticalAlignment="Top" Width="60" Background="#FFF7598C" Height="59" FontSize="30" ToolTip="Quit Game" FontWeight="Bold" Click="btnClose_Click"/>
+        <Button x:Name="btnPrint" Content="🖨️" HorizontalAlignment="Left" Margin="308,272,0,0" VerticalAlignment="Top" Width="60" Background="#FFF7598C" Height="59" FontSize="30" ToolTip="Print Results" Click="btnPrint_Click"/>
+        <Button x:Name="btnRestart" Content="🔄" HorizontalAlignment="Left" Margin="242,272,0,0" VerticalAlignment="Top" Width="60" Height="59" Foreground="Black" Background="#FFF7598C" FontSize="30" ToolTip="Restart Game" Click="btnRestart_Click" />
+        <Label Content="⌨ BoniTypes" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="277" FontSize="35" FontFamily="Unispace" Foreground="#FFF7598C"/>
+        <Label x:Name="lblWpm" Content="Label" HorizontalAlignment="Left" Margin="355,92,0,0" VerticalAlignment="Top" Width="125" Height="47" FontFamily="Gadugi" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lblAccuracy" Content="Label" HorizontalAlignment="Left" Margin="355,144,0,0" VerticalAlignment="Top" Width="125" Height="47" FontFamily="Gadugi" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lblCompleteWords" Content="Label" HorizontalAlignment="Left" Margin="355,196,0,0" VerticalAlignment="Top" Width="125" Height="47" FontFamily="Gadugi" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btnChar" Content="📝" HorizontalAlignment="Left" Margin="373,272,0,0" VerticalAlignment="Top" Width="60" Background="#FFF7598C" Height="59" FontSize="30" ToolTip="Display the typed characters" Click="btnChar_Click"/>
+
+    </Grid>
+</Window>
