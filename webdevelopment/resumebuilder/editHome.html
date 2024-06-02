@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> EditContent </title>
+    <link rel="stylesheet" type="text/css" href="editHomDesign.css"/>
+    <meta charset="UTF-8">
+    </head>
+<body>
+
+    <button id="btnLogout" value="OK" type="button" >LOGOUT</button> 
+
+    <fieldset>
+        <legend><h3> Header </h3> </legend>
+
+         <form>
+        
+        <div id="headerOutput">
+        </div>
+
+        
+        <label for="Name" id="headerName">headerName:</label> 
+       
+
+        <input type="text" id="textName" placeholder=""> 
+            <td> <button id="btnHeaderName" value="OK" type="button">SAVE</button>  
+        <br><br>
+
+        
+
+        <label>Select a photo:</label>
+
+        <input type="file" id="PImage" name="PImage"  required>
+        <button id="btnHeaderImage" value="OK" type="button">SAVE</button>  
+        <br><br>
+
+
+        <label for="Address" id="headerAddress">headerAddress:</label> 
+        &nbsp&nbsp
+        <textarea id="textAddress" rows="4" cols="50" placeholder="Address"></textarea>
+        <button id="btnHeaderAddress" value="OK" type="button">SAVE</button>  
+        <br><br>
+
+        <label for="phone" id="headerPhone">headerNumber:</label>
+        &nbsp&nbsp
+        <input type="tel" id="textPhone" name="phone">
+        <button id="btnHeaderPhone" value="OK" type="button">SAVE</button>  
+        <br><br>
+
+        <label for="email" id="headerEmail" >headerEmail:</label>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="email" id="textEmail" name="email" placeholder="">
+        <button id="btnHeaderEmail" value="OK" type="button">SAVE</button>  
+        
+        <br><br>
+        <label for="text" id="headerJobName" >headerJobName:</label>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="text" id="textJobName" name="text" placeholder="">
+        <button id="btnJobName" value="OK" type="button">SAVE</button>  
+        
+        <br><br>
+        </form>
+
+    </fieldset>
+
+
+    <!-- Section 1-->
+    <fieldset>
+        <legend><h3> Section 1 </h3> </legend>
+
+         <form>
+        <label for="Description" id="labelSection1">SectionMainTitle:</label>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="text" id="textSection1" placeholder=""> 
+        <button id="btnSaveSection1Title" value="OK" type="button">SAVE</button>  
+        <br><br>
+        </form>
+
+        <hr>
+
+            <h4>For Paragraph</h4>
+
+            <label for="" Id ="">Section Content: </label>&nbsp
+            <input type="text" id="txtParagraph1Key" placeholder="Input a Key"> &nbsp
+            <textarea id="txtParagraph1Value" rows="4" cols="50" placeholder=""></textarea>
+            <button id="btnSaveParagraph" value="OK" type="button">SAVE</button> <br></br>
+            
+            <hr>
+            <h4>For List Form</h4>
+            <label for="" class="listSection">Section Content: </label>&nbsp
+            <input type="text" id="txtListKey" placeholder="Input a Key"> &nbsp
+            <input type="text" id="txtListValue" placeholder="Input a Value">
+            <button id="btnSaveList" value="OK" type="button">SAVE</button>
+            <br><br>
+            <hr>
+    
+            <h4>Data for experience record</h4>
+
+            <label for="">Section Key: </label>&nbsp
+            <input type="text" id="ERSection" placeholder="Input a Key"> &nbsp
+            <br><br>
+            
+            <label for="">Section Date: &nbsp</label>
+            <input type="date" id="ERDate1" name="birthday" >
+            &nbsp&nbsp&nbsp to 
+            &nbsp&nbsp&nbsp
+            <input type="radio"  id="rdDate1" name="title">
+            <label id="ERPresent">Present </label>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="radio"  id="rdDate2" name="title">
+            <input type="date" id="ERDate2" name="date" >
+            
+            <br><br>
+            <label for="" >Section Occupation/ Course: </label>
+            <input type="text" id="ERSectionOC" placeholder="Input your value">
+            <br><br>
+            <label for="" >Section Company/ School: &nbsp&nbsp</label>
+            <input type="text" id="ERSectionCS" placeholder="Input your value">
+            <br><br>
+            <label for="" >Section Location:</label>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input  type="text" id="ERSectionL" placeholder="Input your value">
+            <button id="btnSaveER" value="OK" type="button">SAVE</button>
+            <hr>
+            <fieldset>
+                <legend> <h4>Result</h4> </legend>
+                
+            <table id="Section1Output" border="1px">
+                <!-- <tr>
+                    <th>KEY</th>
+                    <th>VALUE</th>
+                </tr> -->
+                <!-- <tr id="Section1Output">
+                
+                </tr> -->
+            </table>
+           
+            </fieldset>
+
+
+
+            <br>
+            <!-- <input  type="text" id="txtRemove1" placeholder="Input your value">
+            <button onclick="Remove()" id="btnRemove" value="OK" type="button">Remove</button> -->
+    </fieldset>
+    
+        <!-- Section 2-->
+        <fieldset>
+            <legend><h3> Section 2 </h3> </legend>
+    
+             <form>
+            <label for="Description" id="labelSection2">SectionMainTitle:</label>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="text" id="textSection2" placeholder=""> 
+            <button id="btnSaveSection2Title" value="OK" type="button">SAVE</button>  
+            <br><br>
+            </form>
+    
+            <hr>
+                <h4>For Paragraph</h4>
+    
+                <label for="" Id ="">Section Content: </label>&nbsp
+                <input type="text" id="txtParagraph2Key" placeholder="Input a Key"> &nbsp
+                <textarea id="txtParagraph2Value" rows="4" cols="50" placeholder=""></textarea>
+                <button id="btnSaveParagraph2" value="OK" type="button">SAVE</button> <br></br>
+                
+                <hr>
+                <h4>For List Form</h4>
+                <label for="" class="listSection">Section Content: </label>&nbsp
+                <input type="text" id="txtListKey2" placeholder="Input a Key"> &nbsp
+                <input type="text" id="txtListValue2" placeholder="Input a Value">
+                <button id="btnSaveList2" value="OK" type="button">SAVE</button>
+                <br><br>
+                <hr>
+        
+                <h4>Data for experience record</h4>
+    
+                <label for="">Section Key: </label>&nbsp
+                <input type="text" id="ERSection2" placeholder="Input a Key"> &nbsp
+                <br><br>
+                
+                <label for="">Section Date: &nbsp</label>
+                <input type="date" id="ERDate21" name="birthday" >
+                &nbsp&nbsp&nbsp to 
+                &nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate21" name="title">
+                <label id="ERPresent2">Present </label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate22" name="title">
+                <input type="date" id="ERDate22" name="date" >
+                
+                <br><br>
+                <label for="" >Section Occupation/ Course: </label>
+                <input type="text" id="ERSectionOC2" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Company/ School: &nbsp&nbsp</label>
+                <input type="text" id="ERSectionCS2" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Location:</label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input  type="text" id="ERSectionL2" placeholder="Input your value">
+                <button id="btnSaveER2" value="OK" type="button">SAVE</button>
+                <hr>
+    
+                <fieldset>
+                    <legend> <h4>Result</h4> </legend>
+                    <table id="Section1Output2" border="1px">
+                        
+                        <!-- <tr>
+                            
+                            <th>KEY</th>
+                            <th>VALUE</th>
+                        </tr> -->
+                        <!-- <tr id="Section1Output">
+                        
+                        </tr> -->
+                    </table>
+                </fieldset>
+                <br>
+            <!-- <input  type="text" id="txtRemove2" placeholder="Input your value">
+            <button onclick="Remove()" id="btnRemove" value="OK" type="button">Remove</button> -->
+        </fieldset>
+    
+        <!-- Section 3-->
+        <fieldset>
+            <legend><h3> Section 3 </h3> </legend>
+    
+             <form>
+            <label for="Description" id="labelSection3">SectionMainTitle:</label>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="text" id="textSection3" placeholder=""> 
+            <button id="btnSaveSection3Title" value="OK" type="button">SAVE</button>  
+            <br><br>
+            </form>
+    
+            <hr>
+                <h4>For Paragraph</h4>
+    
+                <label for="" Id ="">Section Content: </label>&nbsp
+                <input type="text" id="txtParagraph3Key" placeholder="Input a Key"> &nbsp
+                <textarea id="txtParagraph3Value" rows="4" cols="50" placeholder=""></textarea>
+                <button id="btnSaveParagraph3" value="OK" type="button">SAVE</button> <br></br>
+                
+                <hr>
+                <h4>For List Form</h4>
+                <label for="" class="listSection">Section Content: </label>&nbsp
+                <input type="text" id="txtListKey3" placeholder="Input a Key"> &nbsp
+                <input type="text" id="txtListValue3" placeholder="Input a Value">
+                <button id="btnSaveList3" value="OK" type="button">SAVE</button>
+                <br><br>
+                <hr>
+        
+                <h4>Data for experience record</h4>
+    
+                <label for="">Section Key: </label>&nbsp
+                <input type="text" id="ERSection3" placeholder="Input a Key"> &nbsp
+                <br><br>
+                
+                <label for="">Section Date: &nbsp</label>
+                <input type="date" id="ERDate31" name="birthday" >
+                &nbsp&nbsp&nbsp to 
+                &nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate31" name="title">
+                <label id="ERPresent3">Present </label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate32" name="title">
+                <input type="date" id="ERDate32" name="date" >
+                
+                <br><br>
+                <label for="" >Section Occupation/ Course: </label>
+                <input type="text" id="ERSectionOC3" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Company/ School: &nbsp&nbsp</label>
+                <input type="text" id="ERSectionCS3" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Location:</label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input  type="text" id="ERSectionL3" placeholder="Input your value">
+                <button id="btnSaveER3" value="OK" type="button">SAVE</button>
+                <hr>
+    
+                <fieldset>
+                    <legend> <h4>Result</h4> </legend>
+                    <table id="Section1Output3" border="1px">
+                        <!-- <tr>
+                            <th>KEY</th>
+                            <th>VALUE</th>
+                        </tr> -->
+                        <!-- <tr id="Section1Output">
+                        
+                        </tr> -->
+                    </table>
+                </fieldset>
+                <br>
+            <!-- <input  type="text" id="txtRemove3" placeholder="Input your value">
+            <button  onclick="Remove()" id="btnRemove" value="OK" type="button">Remove</button> -->
+        </fieldset>
+    
+    
+        <!-- Section 4-->
+        <fieldset>
+            <legend><h3> Section 4 </h3> </legend>
+    
+             <form>
+            <label for="Description" id="labelSection4">SectionMainTitle:</label>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <!-- <input type="text" id="textSection4" placeholder=""> 
+            <button onclick="Remove()" id="btnSaveSection4Title" value="OK" type="button">SAVE</button>   -->
+            <br><br>
+            </form>
+    
+            <hr>
+                <h4>For Paragraph</h4>
+    
+                <label for="" Id ="">Section Content: </label>&nbsp
+                <input type="text" id="txtParagraph4Key" placeholder="Input a Key"> &nbsp
+                <textarea id="txtParagraph4Value" rows="4" cols="50" placeholder=""></textarea>
+                <button id="btnSaveParagraph4" value="OK" type="button">SAVE</button> <br></br>
+                
+                <hr>
+                <h4>For List Form</h4>
+                <label for="" class="listSection">Section Content: </label>&nbsp
+                <input type="text" id="txtListKey4" placeholder="Input a Key"> &nbsp
+                <input type="text" id="txtListValue4" placeholder="Input a Value">
+                <button id="btnSaveList4" value="OK" type="button">SAVE</button>
+                <br><br>
+                <hr>
+        
+                <h4>Data for experience record</h4>
+    
+                <label for="">Section Key: </label>&nbsp
+                <input type="text" id="ERSection4" placeholder="Input a Key"> &nbsp
+                <br><br>
+                
+                <label for="">Section Date: &nbsp</label>
+                <input type="date" id="ERDate41" name="birthday" >
+                &nbsp&nbsp&nbsp to 
+                &nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate41" name="title">
+                <label id="ERPresent4">Present </label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate42" name="title">
+                <input type="date" id="ERDate42" name="date" >
+                
+                <br><br>
+                <label for="" >Section Occupation/ Course: </label>
+                <input type="text" id="ERSectionOC4" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Company/ School: &nbsp&nbsp</label>
+                <input type="text" id="ERSectionCS4" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Location:</label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input  type="text" id="ERSectionL4" placeholder="Input your value">
+                <button id="btnSaveER4" value="OK" type="button">SAVE</button>
+                <hr>
+    
+                <fieldset>
+                    <legend> <h4>Result</h4> </legend>
+                    <table id="Section1Output4" border="1px">
+                        <!-- <tr>
+                            <th>KEY</th>
+                            <th>VALUE</th>
+                        </tr> -->
+                        <!-- <tr id="Section1Output">
+                        
+                        </tr> -->
+                    </table>
+                </fieldset>
+                <br>
+            <!-- <input  type="text" id="txtRemove4" placeholder="Input your value">
+            <button onclick="Remove()" id="btnRemove" value="OK" type="button">Remove</button> -->
+        </fieldset>
+    
+    
+        <!-- Section 5-->
+        <fieldset>
+            <legend><h3> Side Section 1 </h3> </legend>
+    
+             <form>
+            <label for="Description" id="labelSection5">SectionMainTitle:</label>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="text" id="textSection5" placeholder=""> 
+            <button id="btnSaveSection5Title" value="OK" type="button">SAVE</button>  
+            <br><br>
+            </form>
+    
+            <hr>
+                <h4>For Paragraph</h4>
+    
+                <label for="" Id ="">Section Content: </label>&nbsp
+                <input type="text" id="txtParagraph5Key" placeholder="Input a Key"> &nbsp
+                <textarea id="txtParagraph5Value" rows="4" cols="50" placeholder=""></textarea>
+                <button id="btnSaveParagraph5" value="OK" type="button">SAVE</button> <br></br>
+                
+                <hr>
+                <h4>For List Form</h4>
+                <label for="" class="listSection">Section Content: </label>&nbsp
+                <input type="text" id="txtListKey5" placeholder="Input a Key"> &nbsp
+                <input type="text" id="txtListValue5" placeholder="Input a Value">
+                <button id="btnSaveList5" value="OK" type="button">SAVE</button>
+                <br><br>
+                <hr>
+        
+                <h4>Data for experience record</h4>
+    
+                <label for="">Section Key: </label>&nbsp
+                <input type="text" id="ERSection5" placeholder="Input a Key"> &nbsp
+                <br><br>
+                
+                <label for="">Section Date: &nbsp</label>
+                <input type="date" id="ERDate51" name="birthday" >
+                &nbsp&nbsp&nbsp to 
+                &nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate51" name="title">
+                <label id="ERPresent5">Present </label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate52" name="title">
+                <input type="date" id="ERDate52" name="date" >
+                
+                <br><br>
+                <label for="" >Section Occupation/ Course: </label>
+                <input type="text" id="ERSectionOC5" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Company/ School: &nbsp&nbsp</label>
+                <input type="text" id="ERSectionCS5" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Location:</label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input  type="text" id="ERSectionL5" placeholder="Input your value">
+                <button id="btnSaveER5" value="OK" type="button">SAVE</button>
+                <hr>
+    
+                <fieldset>
+                    <legend> <h4>Result</h4> </legend>
+                    <table id="Section1Output5" border="1px">
+                        <!-- <tr>
+                            <th>KEY</th>
+                            <th>VALUE</th>
+                        </tr> -->
+                        <!-- <tr id="Section1Output">
+                        
+                        </tr> -->
+                    </table>
+                </fieldset>
+                <br>
+            <!-- <input  type="text" id="txtRemove5" placeholder="Input your value">
+            <button onclick="Remove()" id="btnRemove" value="OK" type="button">Remove</button> -->
+        </fieldset>
+
+    
+    
+        <!-- Section 6-->
+        <fieldset>
+            <legend><h3> Side Section 2 </h3> </legend>
+    
+             <form>
+            <label for="Description" id="labelSection6">SectionMainTitle:</label>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="text" id="textSection6" placeholder=""> 
+            <button id="btnSaveSection6Title" value="OK" type="button">SAVE</button>  
+            <br><br>
+            </form>
+    
+            <hr>
+                <h4>For Paragraph</h4>
+    
+                <label for="" Id ="">Section Content: </label>&nbsp
+                <input type="text" id="txtParagraph6Key" placeholder="Input a Value">
+                <textarea id="txtParagraph6Value" rows="4" cols="50" placeholder=""></textarea>
+                <button id="btnSaveParagraph6" value="OK" type="button">SAVE</button> <br></br>
+                
+                <hr>
+                <h4>For List Form</h4>
+                <label for="" class="listSection">Section Content: </label>&nbsp
+                <input type="text" id="txtListKey6" placeholder="Input a Key"> &nbsp
+                <input type="text" id="txtListValue6" placeholder="Input a Value">
+                <button id="btnSaveList6" value="OK" type="button">SAVE</button>
+                <br><br>
+                <hr>
+        
+                <h4>Data for experience record</h4>
+    
+                <label for="">Section Key: </label>&nbsp
+                <input type="text" id="ERSection6" placeholder="Input a Key"> &nbsp
+                <br><br>
+                
+                <label for="">Section Date: &nbsp</label>
+                <input type="date" id="ERDate61" name="birthday" >
+                &nbsp&nbsp&nbsp to 
+                &nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate61" name="title">
+                <label id="ERPresent6">Present </label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate62" name="title">
+                <input type="date" id="ERDate62" name="date" >
+                
+                <br><br>
+                <label for="" >Section Occupation/ Course: </label>
+                <input type="text" id="ERSectionOC6" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Company/ School: &nbsp&nbsp</label>
+                <input type="text" id="ERSectionCS6" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Location:</label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input  type="text" id="ERSectionL6" placeholder="Input your value">
+                <button id="btnSaveER6" value="OK" type="button">SAVE</button>
+                <hr>
+    
+                <fieldset>
+                    <legend> <h4>Result</h4> </legend>
+                    <table id="Section1Output6" border="1px">
+                        <!-- <tr>
+                            <th>KEY</th>
+                            <th>VALUE</th>
+                        </tr> -->
+                        <!-- <tr id="Section1Output">
+                        
+                        </tr> -->
+                    </table>
+                </fieldset>
+                <br>
+            <!-- <input  type="text" id="txtRemove6" placeholder="Input your value">
+            <button onclick="Remove()" id="btnRemove" value="OK" type="button">Remove</button> -->
+        </fieldset>
+    
+        <!-- Section 7-->
+        <fieldset>
+            <legend><h3> Side Section 3 </h3> </legend>
+    
+             <form>
+            <label for="Description" id="labelSection7">SectionMainTitle:</label>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="text" id="textSection7" placeholder=""> 
+            <button id="btnSaveSection7Title" value="OK" type="button">SAVE</button>  
+            <br><br>
+            </form>
+    
+            <hr>
+                <h4>For Paragraph</h4>
+    
+                <label for="" Id ="">Section Content: </label>&nbsp
+                <input type="text" id="txtParagraph7Key" placeholder="Input a Key"> &nbsp
+                <textarea id="txtParagraph7Value" rows="4" cols="50" placeholder=""></textarea>
+                <button id="btnSaveParagraph7" value="OK" type="button">SAVE</button> <br></br>
+                
+                <hr>
+                <h4>For List Form</h4>
+                <label for="" class="listSection">Section Content: </label>&nbsp
+                <input type="text" id="txtListKey7" placeholder="Input a Key"> &nbsp
+                <input type="text" id="txtListValue7" placeholder="Input a Value">
+                <button id="btnSaveList7" value="OK" type="button">SAVE</button>
+                <br><br>
+                <hr>
+        
+                <h4>Data for experience record</h4>
+    
+                <label for="">Section Key: </label>&nbsp
+                <input type="text" id="ERSection7" placeholder="Input a Key"> &nbsp
+                <br><br>
+                
+                <label for="">Section Date: &nbsp</label>
+                <input type="date" id="ERDate71" name="birthday" >
+                &nbsp&nbsp&nbsp to 
+                &nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate71" name="title">
+                <label id="ERPresent7">Present </label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate72" name="title">
+                <input type="date" id="ERDate72" name="date" >
+                
+                <br><br>
+                <label for="" >Section Occupation/ Course: </label>
+                <input type="text" id="ERSectionOC7" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Company/ School: &nbsp&nbsp</label>
+                <input type="text" id="ERSectionCS7" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Location:</label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input  type="text" id="ERSectionL7" placeholder="Input your value">
+                <button id="btnSaveER7" value="OK" type="button">SAVE</button>
+                <hr>
+    
+                <fieldset>
+                    <legend> <h4>Result</h4> </legend>
+                    <table id="Section1Output7" border="1px">
+                        <!-- <tr>
+                            <th>KEY</th>
+                            <th>VALUE</th>
+                        </tr> -->
+                        <!-- <tr id="Section1Output">
+                        
+                        </tr> -->
+                    </table>
+                </fieldset>
+                <br>
+            <!-- <input  type="text" id="txtRemove7" placeholder="Input your value">
+            <button onclick="Remove()" id="btnRemove" value="OK" type="button">Remove</button> -->
+        </fieldset>
+    
+    
+        <!-- Section 8-->
+        <fieldset>
+            <legend><h3> Side Section 8 </h3> </legend>
+    
+             <form>
+            <label for="Description" id="labelSection8">SectionMainTitle:</label>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="text" id="textSection8" placeholder=""> 
+            <button id="btnSaveSection8Title" value="OK" type="button">SAVE</button>  
+            <br><br>
+            </form>
+    
+            <hr>
+                <h4>For Paragraph</h4>
+    
+                <label for="" Id ="">Section Content: </label>&nbsp
+                <input type="text" id="txtParagraph8Key" placeholder="Input a Key"> &nbsp
+                <textarea id="txtParagraph8Value" rows="4" cols="50" placeholder=""></textarea>
+                <button id="btnSaveParagraph8" value="OK" type="button">SAVE</button> <br></br>
+                
+                <hr>
+                <h4>For List Form</h4>
+                <label for="" class="listSection">Section Content: </label>&nbsp
+                <input type="text" id="txtListKey8" placeholder="Input a Key"> &nbsp
+                <input type="text" id="txtListValue8" placeholder="Input a Value">
+                <button id="btnSaveList8" value="OK" type="button">SAVE</button>
+                <br><br>
+                <hr>
+        
+                <h4>Data for experience record</h4>
+    
+                <label for="">Section Key: </label>&nbsp
+                <input type="text" id="ERSection8" placeholder="Input a Key"> &nbsp
+                <br><br>
+                
+                <label for="">Section Date: &nbsp</label>
+                <input type="date" id="ERDate81" name="birthday" >
+                &nbsp&nbsp&nbsp to 
+                &nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate81" name="title">
+                <label id="ERPresent8">Present </label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="radio"  id="rdDate82" name="title">
+                <input type="date" id="ERDate82" name="date" >
+                
+                <br><br>
+                <label for="" >Section Occupation/ Course: </label>
+                <input type="text" id="ERSectionOC8" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Company/ School: &nbsp&nbsp</label>
+                <input type="text" id="ERSectionCS8" placeholder="Input your value">
+                <br><br>
+                <label for="" >Section Location:</label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input  type="text" id="ERSectionL8" placeholder="Input your value">
+                <button id="btnSaveER8" value="OK" type="button">SAVE</button>
+                <hr>
+    
+                <fieldset>
+                    <legend> <h4>Result</h4> </legend>
+                    <table id="Section1Output8" border="1px">
+                        <!-- <tr>
+                            <th>KEY</th>
+                            <th>VALUE</th>
+                        </tr> -->
+                        <!-- <tr id="Section1Output">
+                        
+                        </tr> -->
+                    </table>
+                </fieldset>
+                <br>
+            <!-- <input  type="text" id="txtRemove" placeholder="Input your value">
+            <button onclick="Remove()" id="btnRemove" value="OK" type="button">Remove</button> -->
+        </fieldset>
+ 
+</body>
+
+<script src="editpage.js">
+</script>
+    
+</html>

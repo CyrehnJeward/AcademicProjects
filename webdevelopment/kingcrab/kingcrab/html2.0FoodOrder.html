@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <script src="inputFieldFunctions.js"></script>
+    <link rel="stylesheet" href="stylesheet2.css" />
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+   
+  </head>
+  <body>
+    <div class="header">
+      <h1>Waiter</h1>
+    </div>
+
+    <div class="navbar">
+      <a href="html2.0FoodOrder.html" class="active">Food Order</a>
+      <a href="html2.1FoodStatus.html" class="hover">Food Status</a>
+      <a href="html2.2FoodServe.html" class="hover">Food Serve</a>
+      <a href="htmlLogin.html" class="right">Logout</a>
+
+
+    </div>
+
+    <div class="rowMain">
+      <div class="mainLeft">
+        <div class="main">
+          <!-- <h3 id="cName">Customer Name: </h3>
+          <h3 id="tNumber">Table Number: </h3>
+          <h3>Food Name: </h3>
+          <div class="listBox">
+            <select class="userList" id="menuID"> </select>
+          </div>
+          <label for="phone"><b> Food Quantity:</b></label> 
+          <input class="someLabel" id="fqID" type="number" placeholder="1~" name="numberofcustomer" min="1"  required>  
+          <button type="submit" onclick="addOrder()">ADD</button> -->
+
+
+
+
+
+
+
+
+          <form action="InsertFoodDetail.php"  id ="myForm" method="get">
+
+            <h3 id="cName">Customer Name: </h3>
+            <input class="someLabel" id="customerID" name="RD_ID" type="hidden" required>  
+              
+
+
+            <h3 id="tNumber">Table Number: </h3>
+            <h3>Food Name: </h3>
+
+            <!-- Need to get waiter ID from session without using an input class -->
+            <input class="someLabel" id="waiterID" type="hidden" name="EDW_ID"> 
+
+            <div class="listBox">
+              <select class="userList" id="menuID" name="MT_ID" required> </select>
+            </div>
+
+            <label for="foodQuantity"><b> Food Quantity:</b></label>
+            <input class="someLabel" id="fqID" type="number" placeholder="1~" name="FO_DishQuantity" min="1"  required>  
+
+            
+            <!-- kokhie welp -->
+            <!-- <input type="text" id="UserID" name="UserID" hidden> -->
+            
+            <button type="submit" name="submit" id = "submit">Submit</button>
+          </form>
+        
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="footer">
+      <h2>King Crab Restaurant</h2>
+    </div>
+  </body>
+</html>
+<script>
+  // window.onload = function () {
+    
+  //   const queryString = window.location.search;
+  //   const urlParams = new URLSearchParams(queryString);
+  //   var userID =  urlParams.get("ID");
+  //   sessionStorage.setItem("ID",userID);
+  //   setIDtoSessionStorage();
+  //   sessionStorageCheckID();
+  // }
+ var head = document.getElementById("customerID").value;
+  var body = document.getElementById("waiterID").value;
+  var UserID;
+  window.onload = function () {
+    
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    UserID =  urlParams.get("ID");
+    sessionStorage.setItem("ID",UserID);
+    var ID = sessionStorage.getItem("ID");
+    document.getElementById('waiterID').value = UserID;
+
+  };
+
+ 
+  
+  var httpRequest;
+  var start = 0;
+  //   document.getElementById("request").addEventListener("click", makeRequest);
+  var httpRequest = new XMLHttpRequest();
+  httpRequest.onreadystatechange = function () {
+    if (httpRequest.readyState === httpRequest.DONE) {
+      if (httpRequest.status === 200) {
+        //alert(httpRequest.responseText);
+        // var rows = document.getElementById("table").rows.length;
+        // var rows = document.getElementById("table").rows.length;
+        
+        // if(rows > 2 ){
+        //     for (let i = rows; i > 1; i--){
+        //         document.getElementById("table").deleteRow(i-1);
+        //     }
+        // }
+        
+        myObj = JSON.parse(httpRequest.responseText);
+        for (var key of Object.keys(myObj)) {
+          // tr = document.createElement("tr");
+          // tr.setAttribute("id", "row" + key);
+
+          var empID = myObj[key].ED_ID;
+          var firstName = myObj[key].RD_CustomerFirstName;
+          var lastName = myObj[key].RD_CustomerLastName;
+          var status = myObj[key].Status;
+          var tbID = myObj[key].TB_ID;
+          var RD_ID = key;
+          if (status == 2) {
+            if(empID == UserID) {
+              document.getElementById("customerID").value = RD_ID;
+              document.getElementById("cName").innerHTML = "Customer Name: " + firstName + " " + lastName;
+              document.getElementById("tNumber").innerHTML = "Table Number: " + tbID;
+            }
+          }
+
+          
+          // if (key % 2 == 0) {
+          //   tr.setAttribute("style", "background:white");
+          // }
+          
+          //#region Edit this form database
+          // table.appendChild(tr);
+          // tr.appendChild((td = document.createElement("td")));
+          // td.innerHTML = key;
+          // tr.appendChild((td = document.createElement("td")));
+          // td.innerHTML = myObj[key].CO_ID;
+          // tr.appendChild((td = document.createElement("td")));
+          // td.innerHTML = myObj[key].MT_ID;
+          // tr.appendChild((td = document.createElement("td")));
+          // td.innerHTML = myObj[key].EDW_ID;
+          // tr.appendChild((td = document.createElement("td")));
+          // td.innerHTML = myObj[key].FO_ServingStatus;
+          // tr.appendChild((td = document.createElement("td")));
+          // td.innerHTML = myObj[key].EDC_ID;
+          // tr.appendChild((td = document.createElement("td")));
+          // td.innerHTML = myObj[key].FO_DishStatus;
+          // tr.appendChild((td = document.createElement("td")));
+          // td.innerHTML = myObj[key].FO_DishQuantity;
+
+         //#endregion Edit this form database
+
+         
+        }
+        // for(var key of Object.keys(myObj[1])){
+        //   document.getElementById("photoID").src = myObj[key].picturePath
+        // }
+      } else {
+        alert("Something's wrong here!");
+      }
+
+    }
+    // table.setAttribute("class", "myId");
+  }
+
+  var option2 = '<option value= " " disabled selected hidden class="options" "></option>';
+  var MenuRequest;
+  var MenuRequest = new XMLHttpRequest();
+  MenuRequest.onreadystatechange = function () {
+    if (MenuRequest.readyState === MenuRequest.DONE) {
+      if (MenuRequest.status === 200) {
+        myObj = JSON.parse(MenuRequest.responseText);
+        for (var key of Object.keys(myObj)) {
+
+          var dishID = key;
+          var dishName = myObj[key].MT_DishName;
+          option2 += '<option value= "'+dishID+'" class="options" ">'+ dishName + '</option>';
+
+        }
+        document.getElementById("menuID").innerHTML = option2;
+
+      }
+    }
+  }
+
+
+  httpRequest.open("get", "GetFoodData.php?Table=tbReservationDetail&TableID=0");
+  // "GetData.php?Table=ViewUserSecurityKeys&rStart="+start+"&userID="+0
+  httpRequest.send();
+
+  MenuRequest.open("get", "GetFoodData.php?Table=viewMenuTable&TableID=0");
+  MenuRequest.send();
+
+
+  var table = document.getElementById("table");
+  var thead, tr, td;
+  table.appendChild((thead = document.createElement("thead")));
+  thead.appendChild((tr = document.createElement("tr")));
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "<center><b>Dish Name</center>";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "<center><b>Dish Quantity</center>";
+  
+
+    
+
+  
+ 
+
+</script>

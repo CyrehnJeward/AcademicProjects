@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <script src="inputFieldFunctions.js"></script>
+    <link rel="stylesheet" href="stylesheet2.css" />
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+   
+  </head>
+  <body>
+    <div class="header">
+      <h1>Account</h1>
+    </div>
+
+    <div class="navbar">
+     
+      <a href="html4.0Accountant.html" class="hover">Payment</a>
+      <a href="html4.3Transaction.html" class="hover">Transaction History</a>
+      <a href="html4.4OrderTally.html" class="active">Order Tally</a>
+      <a href="htmlLogin.html" class="right">Logout</a>
+
+
+
+
+    </div>
+
+    <div class="rowMain">
+    <div class="main"> 
+     Table
+  </div>
+
+
+
+</div>
+    <div class="footer">
+      <h2>King Crab Restaurant</h2>
+    </div>
+  </body>
+</html>
+<script>
+  //window.onload = function () {
+    
+    // const queryString = window.location.search;
+    // const urlParams = new URLSearchParams(queryString);
+    // var userID =  urlParams.get("ID");
+    // sessionStorage.setItem("ID",userID);
+  //   setIDtoSessionStorage();
+  //   sessionStorageCheckID();
+
+  // };
+  // setIDtoSessionStorage();
+
+  var table = document.getElementById("table");
+  var thead, tr, td;
+  table.appendChild((thead = document.createElement("thead")));
+  thead.appendChild((tr = document.createElement("tr")));
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "Food Name: ";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "Order Tally: ";
+
+
+
+  // var httpRequest;
+  // var start = 0;
+  // //   document.getElementById("request").addEventListener("click", makeRequest);
+  // var httpRequest = new XMLHttpRequest();
+  // httpRequest.onreadystatechange = function () {
+  //   if (httpRequest.readyState === httpRequest.DONE) {
+  //     if (httpRequest.status === 200) {
+  //       //alert(httpRequest.responseText);
+  //       var rows = document.getElementById("table").rows.length;
+  //       var rows = document.getElementById("table").rows.length;
+        
+  //       if(rows > 2 ){
+  //           for (let i = rows; i > 1; i--){
+  //               document.getElementById("table").deleteRow(i-1);
+         
+
+  //           }
+           
+
+  //       }
+  //       myObj = JSON.parse(httpRequest.responseText);
+  //       for (var key of Object.keys(myObj)) {
+  //         tr = document.createElement("tr");
+  //         tr.setAttribute("id", "row" + key);
+  //         // if (key % 2 == 0) {
+  //         //   tr.setAttribute("style", "background:white");
+  //         // }
+
+  //         //#region Edit this form database
+  //         table.appendChild(tr);
+  //         tr.appendChild((td = document.createElement("td")));
+  //         td.innerHTML = key;
+  //         tr.appendChild((td = document.createElement("td")));
+  //         td.innerHTML = myObj[key].userID;
+  //         tr.appendChild((td = document.createElement("td")));
+  //         td.innerHTML = myObj[key].Name;
+  //         tr.appendChild((td = document.createElement("td")));
+  //         td.innerHTML = myObj[key].Sender;
+  //         tr.appendChild((td = document.createElement("td")));
+  //         td.innerHTML = myObj[key].Receiver;
+  //         tr.appendChild((td = document.createElement("td")));
+  //         td.innerHTML = myObj[key].date.date;
+  //         tr.appendChild((td = document.createElement("td")));
+  //         td.innerHTML = myObj[key].amount;
+  //         tr.appendChild((td = document.createElement("td")));
+  //         td.innerHTML = myObj[key].remark;
+
+  //        var UpToDateBalance = document.getElementById("balance");
+  //        UpToDateBalance.textContent = "$"+myObj[key].UpToDateBalance;
+  //        //#endregion Edit this form database
+
+         
+  //       }
+  //       // for(var key of Object.keys(myObj[1])){
+  //       //   document.getElementById("photoID").src = myObj[key].picturePath
+  //       // }
+  //     } else {
+  //       alert("Something's wrong here!");
+  //     }
+  //   }
+  //   // table.setAttribute("class", "myId");
+  // }
+
+
+  //httpRequest.open("get", "GetData3.php?Table=ViewUserAccountTransactions&userID=" +sessionStorage.getItem("ID"));
+  // "GetData.php?Table=ViewUserSecurityKeys&rStart="+start+"&userID="+0
+  //httpRequest.send();
+</script>

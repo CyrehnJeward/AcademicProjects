@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <script src="inputFieldFunctions.js"></script>
+    <link rel="stylesheet" href="stylesheet2.css" />
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+   
+  </head>
+  <body>
+    <div class="header">
+      <h1>Front Desk</h1>
+    </div>
+
+    <div class="navbar">
+      <a href="#" class="active">Home</a>
+      
+      <a href="htmlLogin.html" class="right">Logout</a>
+
+
+    </div>
+
+    <div class="row">
+      
+      <div class="main">
+        <h2 id="header"> </h2>
+          <div class="container">
+
+            <form action="InsertReservationDetail.php"  id ="myForm" method="get">
+            
+  
+            <label for="TableNumber"><b>Table Number:</b></label>
+            <select id="ul" name="TableID" onchange="selectUser()"></select>
+          
+            <label for="firstName"><b> Available Seats:</b></label>
+            <input type="text" id="TableSeats" name="TableSeats" readonly>
+
+
+            <label for="firstName"><b> FirstName:</b></label>
+            <input type="text" placeholder="Enter First Name" name="customerFirstName" required>
+        
+            <label for="lastName"><b> LastName:</b></label>
+            <input type="text" placeholder="Enter Last Name" name="customerLastName" id = "psw" required>
+       
+            <label for="emailadd"><b> Email Address:</b></label>
+            <input type="email" placeholder="Enter Email Address" name="emailAdd" required>
+    
+            <label for="contactNumber"><b> ContactNumber:</b></label>
+            <input type="text" placeholder="Enter Contact Number" name="contactNumber" id = "contactNumber" required>
+     
+            <label for="numberofcustomer"><b> Number of Customer:</b></label> 
+            <input class="someLabel" type="number" placeholder="1 - 6" name="numberofcustomer" min="1" max="6"  required>  
+           
+            <label for="dateTime"><b> Date & Time:</b></label> 
+            <input class="someLabel" type="datetime-local" id="dateTime" name="dateTime">
+
+            <!-- kokhie welp -->
+            <!-- <input type="text" id="UserID" name="UserID" hidden> -->
+            
+            <button type="submit" name="submit" id = "submit" >Submit</button>
+          </form>
+
+  </div>
+
+    <div class="footer">
+      <h2>King Crab Restaurant</h2>
+    </div>
+  </body>
+</html>
+<script>
+
+  window.onload = function () {
+    
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    var TableID =  urlParams.get("TableID");
+    document.getElementById("header").textContent = "Create new reservation form:";
+    //document.getElementById("TableID").value = TableID;
+
+  //  kokhie welp
+    // document.getElementById("UserID").value = sessionStorage.getItem("ID",UserID);
+  };
+
+    var httpRequest = new XMLHttpRequest(); 
+    var OP = '<option value= " " disabled selected hidden class="options" "></option>';
+    httpRequest.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText); 
+        for(var key of Object.keys(myObj)) {
+          OP += '<option value= "'+myObj[key].TB_ChairCount+'" class="options" ">'+ key +'</option>';
+        }
+        
+      } 
+      document.getElementById("ul").innerHTML = OP;
+     
+      
+    }
+  httpRequest.open("get", "PHPtableNumber.php?Table=viewTable");
+  httpRequest.send();
+
+  function selectUser()
+    {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function()
+        {
+        if (this.readyState == 4 && this.status == 200) 
+        {
+            myObj = JSON.parse(this.responseText);
+                    
+                for(var a in myObj)
+                {
+                    var oID = a;
+                    var chair = myObj[a].TB_ChairCount
+                    var selectedIDs = document.getElementById('ul').value;
+                    if(oID == selectedIDs){
+                      document.getElementById('TableSeats').value = chair;
+                    }
+                }
+            }
+        };
+        xmlhttp.open("GET", "PHPtableNumber.php?Table=viewTable", true);
+        xmlhttp.send();
+    }
+  
+
+
+  
+  // setIDtoSessionStorage();
+
+ 
+</script>

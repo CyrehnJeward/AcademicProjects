@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <script src="inputFieldFunctions.js"></script>
+    <link rel="stylesheet" href="stylesheet2.css" />
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+   
+  </head>
+  <body>
+    <div class="header">
+      <h1>Account</h1>
+    </div>
+
+    <div class="navbar">
+     
+      <a href="html4.0Accountant.html" class="active">Transaction History</a>
+      <a href="htmlLogin.html" class="right">Logout</a>
+     
+
+
+    </div>
+
+    <div class="main"> 
+      <label for="TableNumber"><b>Table Number:</b></label>
+      <select id="ul" name="TableID" onchange="selectUser()"></select>
+
+
+
+      <table class="centerflex" id="table"></table>
+    </div>
+
+    <div class="footer">
+      <h2>King Crab Restaurant</h2>
+    </div>
+  </body>
+</html>
+<script>
+   var httpRequest = new XMLHttpRequest();
+    window.onload = function () {
+    
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    var UserID =  urlParams.get("ID");
+    sessionStorage.setItem("ID",UserID);
+
+    var OP; 
+    var OP = '<option value= " " disabled selected hidden class="options" "></option>';
+    httpRequest.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText); 
+        for(var key of Object.keys(myObj)) {
+          if(myObj[key].CO_OrderStatus == 1){
+            OP += '<option value= "'+myObj[key].CO_OrderStatus+'" class="options" ">'+ "Paid" +'</option>';
+          }
+          else{
+            OP += '<option value= "'+myObj[key].CO_OrderStatus+'" class="options" ">'+ "UnPaid" +'</option>';
+          }
+        }
+        
+      } 
+      document.getElementById("ul").innerHTML = OP;
+     
+      
+    }
+  httpRequest.open("GET", "GetTableData.php?Table=viewBillingDashBoard&updateID=0", true);
+  httpRequest.send();
+  };
+
+  function selectUser(){
+
+  var table = document.getElementById("table");
+  var thead, tr, td;
+  table.appendChild((thead = document.createElement("thead")));
+  thead.appendChild((tr = document.createElement("tr")));
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "<center><b>Customer Name: </center>";
+  tr.appendChild((td = document.createElement("td")));
+  td.innerHTML = "<center><b>Table Number: </center>";
+
+
+  var selectedvalue = document.getElementById("ul").value;
+
+  var start = 0;
+  //   document.getElementById("request").addEventListener("click", makeRequest);
+  httpRequest.onreadystatechange = function () {
+    if (httpRequest.readyState === httpRequest.DONE) {
+      if (httpRequest.status === 200) {
+        //alert(httpRequest.responseText);
+        var rows = document.getElementById("table").rows.length;
+        var rows = document.getElementById("table").rows.length;
+        
+        if(rows > 1 ){
+            for (let i = rows; i > 1; i--){
+                document.getElementById("table").deleteRow(i-1);
+            }
+        }
+        
+        myObj = JSON.parse(httpRequest.responseText);
+        for (var key of Object.keys(myObj)) {
+          tr = document.createElement("tr");
+          tr.setAttribute("id", "row" + key);
+          // if (key % 2 == 0) {
+          //   tr.setAttribute("style", "background:white");
+          // }
+
+            
+          if(selectedvalue == myObj[key].CO_OrderStatus)
+          //#region Edit this form database
+          table.appendChild(tr);
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = myObj[key].CustomerName;
+          tr.appendChild((td = document.createElement("td")));
+          td.innerHTML = myObj[key].TB_ID;
+
+
+
+      
+         
+          //-------------------------------------------------//
+         
+         //#endregion Edit this form database
+          }
+          
+          
+         
+        }
+      } 
+    }
+    
+  httpRequest.open("GET", "GetTableData.php?Table=viewBillingDashBoard&updateID=0", true);
+  httpRequest.send();
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
